@@ -1,0 +1,26 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "other_products": "Other Products",
+    "gallery": "Gallery",
+    "distributor": "Distributor",
+    "contact": "Contact"
+  },
+  "hero": {
+    "heading": "Premium Mehndi Cones",
+    "subheading": "For Professionals",
+    "description": "Crafted with natural ingredients for rich colour, smooth application and long lasting stain.",
+    "explore": "Explore Products",
+    "distributor": "Become Distributor"
+  },
+  "features": {
+    "rich_color": "Rich Colour",
+    "smooth_flow": "Smooth Flow",
+    "long_lasting": "Long Lasting",
+    "export_quality": "Export Quality",
+    "natural_ingredients": "Natural Ingredients",
+    "leak_proof": "Leak Proof"
+  }
+}

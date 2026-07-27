@@ -1,0 +1,26 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "about": "À propos",
+    "products": "Produits",
+    "other_products": "Autres Produits",
+    "gallery": "Galerie",
+    "distributor": "Distributeur",
+    "contact": "Contact"
+  },
+  "hero": {
+    "heading": "Cônes de Henné Premium",
+    "subheading": "Pour les Professionnels",
+    "description": "Fabriqué avec des ingrédients naturels pour une couleur riche, une application douce et une tache durable.",
+    "explore": "Explorer les Produits",
+    "distributor": "Devenir Distributeur"
+  },
+  "features": {
+    "rich_color": "Couleur Riche",
+    "smooth_flow": "Flux Régulier",
+    "long_lasting": "Longue Durée",
+    "export_quality": "Qualité d'Exportation",
+    "natural_ingredients": "Ingrédients Naturels",
+    "leak_proof": "Anti-fuite"
+  }
+}
