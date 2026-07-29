@@ -4,13 +4,21 @@ import ReusableLightbox from '../components/ui/ReusableLightbox';
 
 const Gallery = () => {
   const galleryImages = [
-    { id: 1, src: '/images/gallery/sample (1).jpeg', alt: 'Gallery 1' },
-    { id: 2, src: '/images/gallery/sample (2).jpeg', alt: 'Gallery 2' },
-    { id: 3, src: '/images/gallery/sample (3).jpeg', alt: 'Gallery 3' },
-    { id: 4, src: '/images/gallery/sample (4).jpeg', alt: 'Gallery 4' },
-    { id: 5, src: '/images/gallery/sample (5).png', alt: 'Gallery 5' },
-    { id: 6, src: '/images/gallery/sample (6).png', alt: 'Gallery 6' },
-    { id: 7, src: '/images/gallery/sample (7).png', alt: 'Gallery 7' },
+    { id: 1, src: "/images/gallery/gallery (1).png", alt: "Gallery 1" },
+    { id: 2, src: "/images/gallery/gallery (2).png", alt: "Gallery 2" },
+    { id: 3, src: "/images/gallery/gallery (3).png", alt: "Gallery 3" },
+    { id: 4, src: "/images/gallery/gallery (4).png", alt: "Gallery 4" },
+    { id: 5, src: "/images/gallery/gallery (5).png", alt: "Gallery 5" },
+    { id: 6, src: "/images/gallery/gallery (6).png", alt: "Gallery 6" },
+    { id: 7, src: "/images/gallery/gallery (7).png", alt: "Gallery 7" },
+    { id: 8, src: "/images/gallery/gallery (8).png", alt: "Gallery 8" },
+    { id: 9, src: "/images/gallery/gallery (9).png", alt: "Gallery 9" },
+    { id: 10, src: "/images/gallery/gallery (10).png", alt: "Gallery 10" },
+    { id: 11, src: "/images/gallery/gallery (11).png", alt: "Gallery 11" },
+    { id: 12, src: "/images/gallery/gallery (12).jpeg", alt: "Gallery 12" },
+    { id: 13, src: "/images/gallery/gallery (13).jpeg", alt: "Gallery 13" },
+    { id: 14, src: "/images/gallery/gallery (14).jpeg", alt: "Gallery 14" },
+    { id: 15, src: "/images/gallery/gallery (15).jpeg", alt: "Gallery 15" },
   ];
 
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
@@ -50,7 +58,7 @@ const Gallery = () => {
             <div
               key={image.id}
               onClick={() => openLightbox(index)}
-              className="aspect-square bg-[var(--color-background)] rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition-opacity flex items-center justify-center"
+              className="aspect-square bg-background rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition-opacity flex items-center justify-center"
             >
               <img
                 src={image.src}

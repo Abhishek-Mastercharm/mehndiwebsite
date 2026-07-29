@@ -1,5 +1,5 @@
 const phone = "919501311070";
-
+const email = "me.overseas.llc@gmail.com";
 const message = encodeURIComponent(
   "Hi! I am interested in your products. Could you please share more details?",
 );
@@ -15,9 +15,16 @@ const Hero = () => {
           className="w-full h-auto object-contain"
         />
         {/* TIK TOK Logo Text */}
-        <div className="absolute top-4 left-4 md:top-8 md:left-8">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-black text-white/90 drop-shadow-lg tracking-widest font-['Playfair_Display']">
+        <div className="absolute top-2 left-2 md:top-8 md:left-8">
+          <h1 className="text-xl md:text-4xl lg:text-5xl font-black text-white/90 drop-shadow-lg tracking-widest font-['Playfair_Display']">
             TIK TOK
+          </h1>
+        </div>
+        {/* right side content */}
+        <div className="absolute top-2 right-2 md:top-8 md:right-8">
+          <h1 className="text-xs md:text-sm lg:text-md font-black text-white/90 drop-shadow-lg tracking-widest font-['Playfair_Display']">
+            Mob: {phone} | 
+            Email: {email}
           </h1>
         </div>
       </div>
