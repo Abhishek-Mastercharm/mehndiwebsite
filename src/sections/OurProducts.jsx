@@ -31,7 +31,7 @@ const OurProducts = () => {
       id="products" 
       title="Our Premium Products" 
       subtitle="Discover Perfection"
-      background="bg-active-sections"
+      background="bg-[var(--color-accent)]"
       padding="py-8 md:py-12"
     >
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2 md:gap-3">

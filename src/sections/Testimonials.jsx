@@ -21,7 +21,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <Section id="testimonials" title="What Our Clients Say">
+    <Section id="testimonials" background="bg-[var(--color-background)]" title="What Our Clients Say">
       <Grid cols={1} md={3} gap={6}>
         {testimonials.map((test, index) => (
           <Card key={index} variant="testimonial" className="text-left group hover:bg-[var(--color-primary)] hover:text-white transition-colors duration-300">

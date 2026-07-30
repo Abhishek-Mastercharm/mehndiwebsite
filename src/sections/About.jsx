@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <Section id="about">
+    <Section id="about" background="bg-[var(--color-background)]">
       <Grid cols={1} md={2} gap={12} className="items-center">
         {/* Image Placeholder */}
         <motion.div 

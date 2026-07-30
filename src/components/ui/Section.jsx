@@ -7,7 +7,7 @@ const Section = ({
   subtitle,
   description,
   children,
-  background = 'bg-transparent',
+  background = 'bg-[var(--color-background)]',
   padding = 'py-16 md:py-24',
   alignment = 'center',
   className = '',

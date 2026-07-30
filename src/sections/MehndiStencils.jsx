@@ -74,7 +74,7 @@ const MehndiStencils = ({ onBack }) => {
 
   return (
     <>
-      <div className="min-h-screen bg-active-sections">
+      <div className="min-h-screen bg-accent">
         {/* Back Button Bar */}
         {/* <div className="w-full bg-primary py-4 px-4 md:px-8 shadow-md">
           <div className="container mx-auto flex items-center">
