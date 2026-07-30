@@ -15,10 +15,11 @@ const Gallery = () => {
     { id: 9, src: "/images/gallery/gallery (9).png", alt: "Gallery 9" },
     { id: 10, src: "/images/gallery/gallery (10).png", alt: "Gallery 10" },
     { id: 11, src: "/images/gallery/gallery (11).png", alt: "Gallery 11" },
-    { id: 12, src: "/images/gallery/gallery (12).jpeg", alt: "Gallery 12" },
+    { id: 12, src: "/images/gallery/gallery (12).png", alt: "Gallery 12" },
     { id: 13, src: "/images/gallery/gallery (13).jpeg", alt: "Gallery 13" },
     { id: 14, src: "/images/gallery/gallery (14).jpeg", alt: "Gallery 14" },
     { id: 15, src: "/images/gallery/gallery (15).jpeg", alt: "Gallery 15" },
+    { id: 16, src: "/images/gallery/gallery (16).jpeg", alt: "Gallery 16" },
   ];
 
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
