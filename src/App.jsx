@@ -61,8 +61,6 @@ function App() {
         <Head />
         <div className="min-h-screen flex flex-col font-['Inter']">
           <Navbar {...navbarProps} />
-          {/* Spacer for fixed navbar */}
-          <div className="pt-16 md:pt-20" />
           <main className="flex-grow">
             <MehndiStencils onBack={goToHome} />
           </main>
@@ -79,8 +77,6 @@ function App() {
         <Head />
         <div className="min-h-screen flex flex-col font-['Inter']">
           <Navbar {...navbarProps} />
-          {/* Spacer for fixed navbar */}
-          <div className="pt-16 md:pt-20" />
           <main className="flex-grow">
             <OurBlogs onBack={goToHome} />
           </main>
