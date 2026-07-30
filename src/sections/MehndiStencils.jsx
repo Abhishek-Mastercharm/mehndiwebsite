@@ -76,7 +76,7 @@ const MehndiStencils = ({ onBack }) => {
     <>
       <div className="min-h-screen bg-accent">
         {/* Back Button Bar */}
-        <div className="w-full bg-primary py-4 px-4 md:px-8 shadow-md">
+        {/* <div className="w-full bg-primary py-4 px-4 md:px-8 shadow-md">
           <div className="container mx-auto flex items-center">
             <button
               onClick={onBack}
@@ -86,7 +86,7 @@ const MehndiStencils = ({ onBack }) => {
               <span>Back to Home</span>
             </button>
           </div>
-        </div>
+        </div> */}
 
         {/* Stencils Grid */}
         <Section

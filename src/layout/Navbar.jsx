@@ -1,11 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaBars, FaTimes, FaGlobe, FaWhatsapp } from 'react-icons/fa';
-import Button from '../components/ui/Button';
+import React, { useState, useEffect } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
-const Navbar = () => {
-  const { t, i18n } = useTranslation();
+const Navbar = ({ onGoToStencils, onGoToBlogs, onGoToHome }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -13,138 +9,124 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language === 'en' ? 'fr' : 'en';
-    i18n.changeLanguage(newLang);
-  };
-
   const navLinks = [
-    { name: t('navbar.home'), href: '#home' },
-    { name: t('navbar.about'), href: '#about' },
-    { name: t('navbar.products'), href: '#products' },
-    { name: t('navbar.other_products'), href: '#other-products' },
-    { name: t('navbar.gallery'), href: '#gallery' },
-    { name: t('navbar.distributor'), href: '#distributor' },
-    { name: t('navbar.contact'), href: '#contact' },
+    {
+      name: "Mehndi Stencils",
+      action: () => {
+        setMobileMenuOpen(false);
+        onGoToStencils?.();
+      },
+    },
+    {
+      name: "Our Blogs",
+      action: () => {
+        setMobileMenuOpen(false);
+        onGoToBlogs?.();
+      },
+    },
   ];
 
+  const handleLogoClick = () => {
+    setMobileMenuOpen(false);
+    onGoToHome?.();
+  };
+
   return (
-    <header 
-      className={`fixed top-0 left-0 w-full z-[var(--zIndex-sticky)] transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/80 backdrop-blur-md shadow-md py-3' 
-          : 'bg-transparent py-5'
-      }`}
-    >
-      <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
-        {/* Logo */}
-        <div className="flex items-center">
-          <a href="#" className="text-2xl md:text-3xl font-bold font-['Playfair_Display'] tracking-wider text-[var(--color-primary)]">
-            TIK TOK
-          </a>
-        </div>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-          {navLinks.map((link, index) => (
-            <a 
-              key={index} 
-              href={link.href}
-              className="text-[var(--color-text)] hover:text-[var(--color-secondary)] font-medium text-sm transition-colors uppercase tracking-wide"
-            >
-              {link.name}
-            </a>
-          ))}
-        </nav>
-
-        {/* Actions */}
-        <div className="hidden lg:flex items-center space-x-4">
-          <button 
-            onClick={toggleLanguage}
-            className="flex items-center text-sm font-semibold uppercase hover:text-[var(--color-secondary)] transition-colors"
+    <>
+      <header
+        className={`fixed top-0 left-0 w-full z-[60] transition-all duration-300 ${
+          isScrolled
+            ? "bg-white/95 backdrop-blur-md shadow-md"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="container mx-auto px-4 md:px-8 h-12 md:h-16 flex justify-between items-center">
+          {/* Logo */}
+          <div
+            onClick={handleLogoClick}
+            className={`flex items-center cursor-pointer transition-all duration-300 ${
+              isScrolled
+                ? "opacity-100 visible"
+                : "opacity-0 invisible pointer-events-none"
+            }`}
           >
-            <FaGlobe className="mr-2" />
-            {i18n.language === 'en' ? 'EN' : 'FR'}
-          </button>
-          <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
-            <Button variant="whatsapp" size="sm" icon={<FaWhatsapp />}>
-              WhatsApp
-            </Button>
-          </a>
-        </div>
+            <span className="text-lg md:text-2xl font-bold font-['Playfair_Display'] tracking-wider text-[var(--color-primary)]">
+              TIK TOK | टिक टोक
+            </span>
+          </div>
 
-        {/* Mobile Hamburger */}
-        <button 
-          className="lg:hidden text-[var(--color-primary)] text-2xl"
-          onClick={() => setMobileMenuOpen(true)}
-          aria-label="Open Menu"
-        >
-          <FaBars />
-        </button>
-      </div>
-
-      {/* Mobile Menu Drawer */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div 
-            initial={{ x: '100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '100%' }}
-            transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed inset-0 z-[var(--zIndex-modal)] bg-[var(--color-background)] flex flex-col"
+          {/* Desktop Navigation */}
+          <nav
+            className={`hidden md:flex items-center gap-6 lg:gap-8 transition-all duration-300 ${
+              isScrolled
+                ? "opacity-100 visible"
+                : "opacity-0 invisible pointer-events-none"
+            }`}
           >
-            <div className="flex justify-between items-center p-5 border-b border-[var(--color-border)]">
-              <span className="text-2xl font-bold font-['Playfair_Display'] text-[var(--color-primary)]">
-                TIK TOK
-              </span>
-              <button 
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-2xl text-[var(--color-primary)]"
-                aria-label="Close Menu"
+            {navLinks.map((link, index) => (
+              <button
+                key={index}
+                onClick={link.action}
+                className="text-[var(--color-text)] hover:text-[var(--color-secondary)] font-semibold text-sm md:text-base transition-colors uppercase tracking-wide cursor-pointer bg-transparent border-none p-0"
               >
-                <FaTimes />
+                {link.name}
               </button>
-            </div>
-            
-            <div className="flex-1 overflow-y-auto py-8 px-6 flex flex-col gap-6">
-              {navLinks.map((link, index) => (
-                <a 
-                  key={index} 
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-xl font-medium text-[var(--color-text)] border-b border-[var(--color-border)] pb-2"
-                >
-                  {link.name}
-                </a>
-              ))}
-              
-              <div className="mt-8 flex flex-col gap-4">
-                <button 
-                  onClick={() => {
-                    toggleLanguage();
-                    setMobileMenuOpen(false);
-                  }}
-                  className="flex items-center text-lg font-semibold uppercase"
-                >
-                  <FaGlobe className="mr-2" />
-                  Language: {i18n.language === 'en' ? 'English' : 'Français'}
-                </button>
-                
-                <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
-                  <Button variant="whatsapp" className="w-full">
-                    Contact on WhatsApp
-                  </Button>
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </header>
+            ))}
+          </nav>
+
+          {/* Mobile Hamburger */}
+          <button
+            className={`md:hidden text-[var(--color-primary)] text-xl bg-transparent border-none cursor-pointer p-1 transition-all duration-300 ${
+              isScrolled
+                ? "opacity-100 visible"
+                : "opacity-0 invisible pointer-events-none"
+            }`}
+            onClick={() => setMobileMenuOpen(true)}
+            aria-label="Open Menu"
+          >
+            <FaBars />
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 z-[70] bg-[var(--color-background)] flex flex-col shadow-2xl">
+          {/* Header */}
+          <div className="flex justify-between items-center px-5 py-4 border-b border-[var(--color-border)]">
+            <span className="text-lg font-bold font-['Playfair_Display'] text-[var(--color-primary)]">
+              TIK TOK | टिक टोक
+            </span>
+
+            <button
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-xl text-[var(--color-primary)] bg-transparent border-none cursor-pointer"
+              aria-label="Close Menu"
+            >
+              <FaTimes />
+            </button>
+          </div>
+
+          {/* Links */}
+          <div className="flex-1 overflow-y-auto px-6 py-6 flex flex-col gap-5">
+            {navLinks.map((link, index) => (
+              <button
+                key={index}
+                onClick={link.action}
+                className="text-lg font-medium text-[var(--color-text)] text-left border-b border-[var(--color-border)] pb-3 bg-transparent border-t-0 border-l-0 border-r-0 transition-colors hover:text-[var(--color-secondary)]"
+              >
+                {link.name}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

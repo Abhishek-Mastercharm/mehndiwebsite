@@ -4,10 +4,12 @@ import { HelmetProvider } from 'react-helmet-async';
 // Eagerly loaded components (above the fold)
 import Head from './seo/Head';
 import Navbar from './layout/Navbar';
+import Footer from './layout/Footer';
 import Hero from './sections/Hero';
 import FeaturesStrip from './sections/FeaturesStrip';
 import StencilsCTA from './sections/StencilsCTA';
 import MehndiStencils from './sections/MehndiStencils';
+import OurBlogs from './sections/OurBlogs';
 
 // Lazy loaded components (below the fold)
 const About = lazy(() => import('./sections/About'));
@@ -32,15 +34,58 @@ function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [showOtherCategories, setShowOtherCategories] = useState(false);
 
-  const goToStencils = () => setCurrentPage('stencils');
-  const goToHome = () => setCurrentPage('home');
+  const goToStencils = () => {
+    window.scrollTo(0, 0);
+    setCurrentPage('stencils');
+  };
+  const goToBlogs = () => {
+    window.scrollTo(0, 0);
+    setCurrentPage('blogs');
+  };
+  const goToHome = () => {
+    window.scrollTo(0, 0);
+    setCurrentPage('home');
+  };
+
+  const navbarProps = {
+    onGoToStencils: goToStencils,
+    onGoToBlogs: goToBlogs,
+    onGoToHome: goToHome,
+    currentPage: currentPage,
+  };
 
   // Mehndi Stencils Page
   if (currentPage === 'stencils') {
     return (
       <HelmetProvider>
         <Head />
-        <MehndiStencils onBack={goToHome} />
+        <div className="min-h-screen flex flex-col font-['Inter']">
+          <Navbar {...navbarProps} />
+          {/* Spacer for fixed navbar */}
+          <div className="pt-16 md:pt-20" />
+          <main className="flex-grow">
+            <MehndiStencils onBack={goToHome} />
+          </main>
+          <Footer />
+        </div>
+      </HelmetProvider>
+    );
+  }
+
+  // Our Blogs Page
+  if (currentPage === 'blogs') {
+    return (
+      <HelmetProvider>
+        <Head />
+        <div className="min-h-screen flex flex-col font-['Inter']">
+          <Navbar {...navbarProps} />
+          {/* Spacer for fixed navbar */}
+          <div className="pt-16 md:pt-20" />
+          <main className="flex-grow">
+            <OurBlogs onBack={goToHome} />
+          </main>
+          <Footer />
+        </div>
       </HelmetProvider>
     );
   }
@@ -50,7 +95,9 @@ function App() {
     <HelmetProvider>
       <Head />
       <div className="min-h-screen flex flex-col font-['Inter']">
-        {/* <Navbar />   */}
+        <Navbar {...navbarProps} />
+        {/* Spacer for fixed navbar */}
+        <div className="pt-0 md:pt-0" />
 
         <main className="flex-grow">
           <Hero />
@@ -95,6 +142,7 @@ function App() {
             {/* <Contact /> */}
           </Suspense>
         </main>
+        <Footer />
       </div>
     </HelmetProvider>
   );
