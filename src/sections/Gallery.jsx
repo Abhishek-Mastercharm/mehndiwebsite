@@ -52,6 +52,7 @@ const Gallery = () => {
         title="Gallery"
         subtitle="Behind The Scenes"
         padding="py-8 md:py-12"
+        background="bg-active-sections"
       >
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
           {galleryImages.map((image, index) => (

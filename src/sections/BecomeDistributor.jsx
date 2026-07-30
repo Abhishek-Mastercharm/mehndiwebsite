@@ -13,7 +13,7 @@ const BecomeDistributor = () => {
   ];
 
   return (
-    <Section id="distributor" background="bg-[var(--color-background)]">
+    <Section id="distributor">
       <div className="bg-[var(--color-accent)] rounded-2xl p-8 md:p-12 shadow-[var(--shadow-md)] border border-[var(--color-border)]">
         <Grid cols={1} md={2} gap={8} className="items-center">
           <div>

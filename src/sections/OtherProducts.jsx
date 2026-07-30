@@ -65,6 +65,7 @@ const OtherProducts = () => {
         title="Other Categories"
         subtitle="Beyond Cones"
         padding="py-2 md:py-4"
+        background="bg-active-sections"
       >
         <div className="relative py-0.5 overflow-hidden">
           {/* Slider Area */}

@@ -18,7 +18,8 @@
 
 @layer base {
   body {
-    background-color: var(--background);
+    background: linear-gradient(135deg, #fce4e4 0%, #ffffff 100%);
+    background-attachment: fixed;
     color: var(--text);
     font-family: "Inter", sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -27,5 +28,12 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: "Playfair Display", serif;
+  }
+}
+
+@layer utilities {
+  .bg-active-sections {
+    /* Change the background color or gradient for Our Products, Other Products, Gallery, Blogs, and Mehndi Stencils below */
+    background-color: transparent; /* You can change this to any color, e.g., #fdfbf7 or var(--color-accent) */
   }
 }
