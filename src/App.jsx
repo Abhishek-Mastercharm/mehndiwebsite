@@ -1,4 +1,11 @@
-import React, { lazy, Suspense, useState } from 'react';
+import React, { lazy, Suspense } from 'react';
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+  useNavigate,
+} from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Eagerly loaded components (above the fold)
@@ -10,6 +17,7 @@ import FeaturesStrip from './sections/FeaturesStrip';
 import StencilsCTA from './sections/StencilsCTA';
 import MehndiStencils from './sections/MehndiStencils';
 import OurBlogs from './sections/OurBlogs';
+import BlogDetails from './components/blogs/BlogDetails';
 
 // Lazy loaded components (below the fold)
 const About = lazy(() => import('./sections/About'));
@@ -30,116 +38,189 @@ const SectionLoader = () => (
   </div>
 );
 
-function App() {
-  const [currentPage, setCurrentPage] = useState('home');
-  const [showOtherCategories, setShowOtherCategories] = useState(false);
-
+// HomePage Component with Show More toggle
+const HomePage = () => {
+  const navigate = useNavigate();
+  const [showOtherCategories, setShowOtherCategories] = React.useState(false);
   const goToStencils = () => {
     window.scrollTo(0, 0);
-    setCurrentPage('stencils');
+    navigate('/mehndi-stencils');
   };
-  const goToBlogs = () => {
-    window.scrollTo(0, 0);
-    setCurrentPage('blogs');
-  };
+
+  return (
+    <div className="min-h-screen flex flex-col font-['Inter']">
+      <main className="flex-grow">
+        <Hero />
+        <FeaturesStrip />
+
+        <Suspense fallback={<SectionLoader />}>
+          {/* <About /> */}
+          {/* <WhyChooseUs /> */}
+          <OurProducts />
+          {/* Stencils CTA Button - Before Other Categories */}
+          <StencilsCTA onClick={goToStencils} />
+
+          {/* Show More / Less Toggle Button */}
+          <div className="w-full bg-[var(--color-accent)] pb-4">
+            <div className="container mx-auto flex justify-center">
+              <button
+                onClick={() => setShowOtherCategories(!showOtherCategories)}
+                className="px-4 py-1.5 text-sm font-medium rounded border transition-colors duration-200
+                 hover:bg-[var(--color-primary)] hover:text-white"
+                style={{
+                  color: 'var(--color-primary)',
+                  borderColor: 'var(--color-primary)',
+                  backgroundColor: 'transparent',
+                  cursor: 'pointer',
+                }}
+              >
+                {showOtherCategories
+                  ? 'Hide Other Categories'
+                  : 'Show Other Categories'}
+              </button>
+            </div>
+          </div>
+
+          {/* Other Categories - Conditional Render */}
+          {showOtherCategories && <OtherProducts />}
+
+          {/* <ExportCountries /> */}
+          {/* <BecomeDistributor /> */}
+          <Gallery />
+          {/* <Testimonials /> */}
+          {/* <FAQ /> */}
+          {/* <Contact /> */}
+        </Suspense>
+      </main>
+    </div>
+  );
+};
+
+// Stencils Page
+const StencilsPage = () => {
+  const navigate = useNavigate();
   const goToHome = () => {
     window.scrollTo(0, 0);
-    setCurrentPage('home');
+    navigate('/');
   };
+  return (
+    <div className="min-h-screen flex flex-col font-['Inter']">
+      <main className="flex-grow">
+        <MehndiStencils onBack={goToHome} />
+      </main>
+    </div>
+  );
+};
 
-  const navbarProps = {
-    onGoToStencils: goToStencils,
-    onGoToBlogs: goToBlogs,
-    onGoToHome: goToHome,
-    currentPage: currentPage,
+// Blogs Page
+const BlogsPage = () => {
+  const navigate = useNavigate();
+  const goToHome = () => {
+    window.scrollTo(0, 0);
+    navigate('/');
   };
+  return (
+    <div className="min-h-screen flex flex-col font-['Inter']">
+      <main className="flex-grow">
+        <OurBlogs onBack={goToHome} />
+      </main>
+    </div>
+  );
+};
 
-  // Mehndi Stencils Page
-  if (currentPage === 'stencils') {
-    return (
-      <HelmetProvider>
-        <Head />
-        <div className="min-h-screen flex flex-col font-['Inter']">
-          <Navbar {...navbarProps} />
-          <main className="flex-grow">
-            <MehndiStencils onBack={goToHome} />
-          </main>
-          <Footer />
-        </div>
-      </HelmetProvider>
-    );
-  }
+// Navbar wrapper with router callbacks
+const NavbarWithRouter = () => {
+  const navigate = useNavigate();
+  return (
+    <Navbar
+      onGoToStencils={() => {
+        window.scrollTo(0, 0);
+        navigate('/mehndi-stencils');
+      }}
+      onGoToBlogs={() => {
+        window.scrollTo(0, 0);
+        navigate('/blogs');
+      }}
+      onGoToHome={() => {
+        window.scrollTo(0, 0);
+        navigate('/');
+      }}
+    />
+  );
+};
 
-  // Our Blogs Page
-  if (currentPage === 'blogs') {
-    return (
-      <HelmetProvider>
-        <Head />
-        <div className="min-h-screen flex flex-col font-['Inter']">
-          <Navbar {...navbarProps} />
-          <main className="flex-grow">
-            <OurBlogs onBack={goToHome} />
-          </main>
-          <Footer />
-        </div>
-      </HelmetProvider>
-    );
-  }
+// Blog Details Page wrapper
+const BlogDetailsPage = () => {
+  return (
+    <div className="min-h-screen flex flex-col font-['Inter']">
+      <main className="flex-grow">
+        <BlogDetails />
+      </main>
+    </div>
+  );
+};
 
-  // Home Page
+// Layout wrapper with Navbar and Footer
+const Layout = ({ children }) => {
+  return (
+    <>
+      <NavbarWithRouter />
+      {children}
+      <Footer />
+    </>
+  );
+};
+
+function App() {
   return (
     <HelmetProvider>
       <Head />
-      <div className="min-h-screen flex flex-col font-['Inter']">
-        <Navbar {...navbarProps} />
-        {/* Spacer for fixed navbar */}
-        <div className="pt-0 md:pt-0" />
+      <Router>
+        <Routes>
+          {/* Home */}
+          <Route
+            path="/"
+            element={
+              <Layout>
+                <HomePage />
+              </Layout>
+            }
+          />
 
-        <main className="flex-grow">
-          <Hero />
-          <FeaturesStrip />
+          {/* Mehndi Stencils */}
+          <Route
+            path="/mehndi-stencils"
+            element={
+              <Layout>
+                <StencilsPage />
+              </Layout>
+            }
+          />
 
-          <Suspense fallback={<SectionLoader />}>
-            {/* <About /> */}
-            {/* <WhyChooseUs /> */}
-            <OurProducts />
-            {/* Stencils CTA Button - Before Other Categories */}
-            <StencilsCTA onClick={goToStencils} />
+          {/* Blogs Listing */}
+          <Route
+            path="/blogs"
+            element={
+              <Layout>
+                <BlogsPage />
+              </Layout>
+            }
+          />
 
-            {/* Show More / Less Toggle Button */}
-            <div className="w-full bg-[var(--color-accent)] pb-4">
-              <div className="container mx-auto flex justify-center">
-                <button
-                  onClick={() => setShowOtherCategories(!showOtherCategories)}
-                  className="px-4 py-1.5 text-sm font-medium rounded border transition-colors duration-200
-                 hover:bg-[var(--color-primary)] hover:text-white"
-                  style={{
-                    color: "var(--color-primary)",
-                    borderColor: "var(--color-primary)",
-                    backgroundColor: "transparent",
-                    cursor: "pointer",
-                  }}
-                >
-                  {showOtherCategories
-                    ? "Hide Other Categories"
-                    : "Show Other Categories"}
-                </button>
-              </div>
-            </div>
+          {/* Blog Details */}
+          <Route
+            path="/blogs/:slug"
+            element={
+              <Layout>
+                <BlogDetailsPage />
+              </Layout>
+            }
+          />
 
-            {/* Other Categories - Conditional Render */}
-            {showOtherCategories && <OtherProducts />}
-
-            {/* <ExportCountries /> */}
-            {/* <BecomeDistributor /> */}
-            <Gallery />
-            {/* <Testimonials /> */}
-            {/* <FAQ /> */}
-            {/* <Contact /> */}
-          </Suspense>
-        </main>
-        <Footer />
-      </div>
+          {/* 404 fallback */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </Router>
     </HelmetProvider>
   );
 }
