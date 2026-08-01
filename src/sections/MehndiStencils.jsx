@@ -6,43 +6,43 @@ import ReusableLightbox from '../components/ui/ReusableLightbox';
 // Edit this array to add/remove/update stencil images
 // Just change the number in the filename and extension as needed
 const stencilImages = [
-  { id: 1, src: "/images/mehndiStencils/stencils (1).jfif", alt: "Stencil 1" },
-  { id: 2, src: "/images/mehndiStencils/stencils (2).jfif", alt: "Stencil 2" },
-  { id: 3, src: "/images/mehndiStencils/stencils (3).jfif", alt: "Stencil 3" },
-  { id: 4, src: "/images/mehndiStencils/stencils (4).jfif", alt: "Stencil 4" },
-  { id: 5, src: "/images/mehndiStencils/stencils (5).jfif", alt: "Stencil 5" },
-  { id: 6, src: "/images/mehndiStencils/stencils (6).jfif", alt: "Stencil 6" },
-  { id: 7, src: "/images/mehndiStencils/stencils (7).jfif", alt: "Stencil 7" },
-  { id: 8, src: "/images/mehndiStencils/stencils (8).jfif", alt: "Stencil 8" },
-  { id: 9, src: "/images/mehndiStencils/stencils (9).jfif", alt: "Stencil 9" },
+  { id: 1, src: "/images/mehndiStencils/stencils (1).webp", alt: "Stencil 1" },
+  { id: 2, src: "/images/mehndiStencils/stencils (2).webp", alt: "Stencil 2" },
+  { id: 3, src: "/images/mehndiStencils/stencils (3).webp", alt: "Stencil 3" },
+  { id: 4, src: "/images/mehndiStencils/stencils (4).webp", alt: "Stencil 4" },
+  { id: 5, src: "/images/mehndiStencils/stencils (5).webp", alt: "Stencil 5" },
+  { id: 6, src: "/images/mehndiStencils/stencils (6).webp", alt: "Stencil 6" },
+  { id: 7, src: "/images/mehndiStencils/stencils (7).webp", alt: "Stencil 7" },
+  { id: 8, src: "/images/mehndiStencils/stencils (8).webp", alt: "Stencil 8" },
+  { id: 9, src: "/images/mehndiStencils/stencils (9).webp", alt: "Stencil 9" },
   {
     id: 10,
-    src: "/images/mehndiStencils/stencils (10).jfif",
+    src: "/images/mehndiStencils/stencils (10).webp",
     alt: "Stencil 10",
   },
   {
     id: 11,
-    src: "/images/mehndiStencils/stencils (11).jfif",
+    src: "/images/mehndiStencils/stencils (11).webp",
     alt: "Stencil 11",
   },
   {
     id: 12,
-    src: "/images/mehndiStencils/stencils (12).jfif",
+    src: "/images/mehndiStencils/stencils (12).webp",
     alt: "Stencil 12",
   },
   {
     id: 13,
-    src: "/images/mehndiStencils/stencils (13).jfif",
+    src: "/images/mehndiStencils/stencils (13).webp",
     alt: "Stencil 13",
   },
   {
     id: 14,
-    src: "/images/mehndiStencils/stencils (14).jfif",
+    src: "/images/mehndiStencils/stencils (14).webp",
     alt: "Stencil 14",
   },
   {
     id: 15,
-    src: "/images/mehndiStencils/stencils (15).jfif",
+    src: "/images/mehndiStencils/stencils (15).webp",
     alt: "Stencil 15",
   },
 ];
@@ -105,15 +105,6 @@ const MehndiStencils = ({ onBack }) => {
                   src={image.src}
                   alt={image.alt}
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    // Fallback: try jfif extension if jpg not found
-                    const currentSrc = e.target.src;
-                    if (currentSrc.includes('.jpg')) {
-                      e.target.src = currentSrc.replace('.jpg', '.jfif');
-                    } else if (currentSrc.includes('.jfif')) {
-                      e.target.src = currentSrc.replace('.jfif', '.jpg');
-                    }
-                  }}
                 />
               </div>
             ))}

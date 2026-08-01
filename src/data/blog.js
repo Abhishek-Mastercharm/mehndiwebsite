@@ -8,7 +8,7 @@ export const blogs = [
     title: "Why Tick Tok Red Cone is Trusted by Mehndi Artists Worldwide",
     excerpt:
       "Smooth flow, rich colour payoff and consistent export quality — that's why professionals choose Tick Tok Red Cone.",
-    image: "/images/product1.png",
+    image: "/images/product1.webp",
     category: "Product Guide",
     date: "5 Aug 2026",
     content:
@@ -30,7 +30,7 @@ export const blogs = [
     title: "How to Get a Dark Mehndi Colour Naturally",
     excerpt:
       "A few simple habits can make your mehndi visibly darker and longer lasting.",
-    image: "/images/product2.png",
+    image: "/images/product2.webp",
     category: "Tips",
     date: "14 July 2026",
     content:
@@ -51,7 +51,7 @@ export const blogs = [
     title: "Best Mehndi Designs for Festivals",
     excerpt:
       "Simple, pretty and quick mehndi styles that are perfect for every celebration.",
-    image: "/images/product3.png",
+    image: "/images/product3.webp",
     category: "Design Ideas",
     date: "2 July 2026",
     content:

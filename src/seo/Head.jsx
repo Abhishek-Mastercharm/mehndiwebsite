@@ -5,7 +5,7 @@ const Head = ({
   title = "TIK TOK Mehndi - Premium Export Quality Henna Cones", 
   description = "TIK TOK manufactures and exports premium, 100% natural mehndi cones. Rich colour, smooth flow, and long-lasting stain for professionals worldwide.",
   canonicalUrl = "https://tiktokmehndi.com",
-  image = "https://tiktokmehndi.com/og-image.jpg"
+  image = "https://tiktokmehndi.com/og-image.webp"
 }) => {
   // Schema.org Structured Data
   const organizationSchema = {
@@ -13,7 +13,7 @@ const Head = ({
     "@type": "Organization",
     "name": "TIK TOK Mehndi",
     "url": canonicalUrl,
-    "logo": `${canonicalUrl}/logo.png`,
+    "logo": `${canonicalUrl}/logo.webp`,
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+91-95013-11070",

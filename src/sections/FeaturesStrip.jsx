@@ -4,7 +4,7 @@ const FeaturesStrip = () => {
   return (
     <div className="w-full">
       <img 
-        src="/images/FeaturesStrip.jpg" 
+        src="/images/FeaturesStrip.webp" 
         alt="Features Strip" 
         className="w-full h-auto object-contain"
       />

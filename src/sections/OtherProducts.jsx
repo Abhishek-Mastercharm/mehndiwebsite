@@ -7,16 +7,16 @@ const OtherProducts = () => {
   const sliderImages = [
     {
       id: 1,
-      src: "/images/slider/silder (1).png",
+      src: "/images/slider/silder (1).webp",
       alt: "Hair Dye & Hair Care",
     },
-    { id: 2, src: "/images/slider/silder (2).png", alt: "Beauty & Cosmatics" },
+    { id: 2, src: "/images/slider/silder (2).webp", alt: "Beauty & Cosmatics" },
     {
       id: 3,
-      src: "/images/slider/silder (3).png",
+      src: "/images/slider/silder (3).webp",
       alt: "Traditional Beauty Products",
     },
-    { id: 4, src: "/images/slider/silder (4).png", alt: "Accessories" },
+    { id: 4, src: "/images/slider/silder (4).webp", alt: "Accessories" },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);

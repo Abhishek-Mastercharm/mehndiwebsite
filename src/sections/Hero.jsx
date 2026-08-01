@@ -12,7 +12,7 @@ const Hero = () => {
       {/* Fully Responsive Hero Image with Logo */}
       <div className="relative w-full">
         <img
-          src="/images/hero.png"
+          src="/images/hero.webp"
           alt="Hero Banner"
           className="w-full h-auto object-contain"
         />

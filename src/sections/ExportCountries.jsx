@@ -5,7 +5,7 @@ const ExportCountries = () => {
     <section id="export-countries" className="w-full">
       {/* Map Image - Full Width */}
       <img
-        src="/images/map.png"
+        src="/images/map.webp"
         alt="World Map"
         className="w-full h-auto object-contain"
       />

@@ -7,22 +7,22 @@ const OurProducts = () => {
     {
       name: "Red Cone",
       description: "Fast colour & dark stain",
-      image: "/images/product1.png"
+      image: "/images/product1.webp"
     },
     {
       name: "Black Cone",
       description: "Deep black colour",
-      image: "/images/product2.png"
+      image: "/images/product2.webp"
     },
     {
       name: "Bridal Cone",
       description: "Rich & long lasting",
-      image: "/images/product3.png"
+      image: "/images/product3.webp"
     },
     {
       name: "Herbal Cone",
       description: "100% herbal natural",
-      image: "/images/product4.png"
+      image: "/images/product4.webp"
     },
   ];
 
