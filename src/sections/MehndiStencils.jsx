@@ -45,6 +45,16 @@ const stencilImages = [
     src: "/images/mehndiStencils/stencils (15).webp",
     alt: "Stencil 15",
   },
+  {
+    id: 16,
+    src: "/images/mehndiStencils/stencils (16).webp",
+    alt: "Stencil 16",
+  },
+  {
+    id: 17,
+    src: "/images/mehndiStencils/stencils (17).webp",
+    alt: "Stencil 17",
+  },
 ];
 
 const MehndiStencils = ({ onBack }) => {
