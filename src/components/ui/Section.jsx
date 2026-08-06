@@ -7,7 +7,7 @@ const Section = ({
   subtitle,
   description,
   children,
-  background = 'bg-[var(--color-background)]',
+  background = 'bg-background',
   padding = 'py-16 md:py-24',
   alignment = 'center',
   className = '',
@@ -30,26 +30,26 @@ const Section = ({
             className={`max-w-3xl mb-6 md:mb-8 ${alignments[alignment]}`}
           >
             {subtitle && (
-              <span className="text-[var(--color-secondary)] font-semibold tracking-wider uppercase text-sm mb-2 block">
+              <span className="text-secondary font-semibold tracking-wider uppercase text-sm mb-2 block">
                 {subtitle}
               </span>
             )}
             {title && (
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-text)] mb-4 font-['Playfair_Display']">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4 font-['Playfair_Display']">
                 {title}
               </h2>
             )}
             {description && (
-              <p className="text-[var(--color-muted)] text-lg md:text-xl">
+              <p className="text-muted text-lg md:text-xl">
                 {description}
               </p>
             )}
             {/* Decorative divider for center alignment */}
             {alignment === 'center' && title && (
               <div className="flex items-center justify-center mt-6">
-                <div className="h-px w-12 bg-[var(--color-border)]"></div>
-                <div className="w-2 h-2 rounded-full bg-[var(--color-secondary)] mx-2"></div>
-                <div className="h-px w-12 bg-[var(--color-border)]"></div>
+                <div className="h-px w-12 bg-border"></div>
+                <div className="w-2 h-2 rounded-full bg-secondary mx-2"></div>
+                <div className="h-px w-12 bg-border"></div>
               </div>
             )}
           </motion.div>

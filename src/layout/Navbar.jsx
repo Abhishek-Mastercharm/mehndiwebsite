@@ -39,7 +39,7 @@ const Navbar = ({ onGoToStencils, onGoToBlogs, onGoToHome }) => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-[60] transition-all duration-300 ${
+        className={`fixed top-0 left-0 w-full z-60 transition-all duration-300 ${
           isScrolled
             ? "bg-white/95 backdrop-blur-md shadow-md"
             : "bg-transparent"
@@ -55,7 +55,7 @@ const Navbar = ({ onGoToStencils, onGoToBlogs, onGoToHome }) => {
                 : "opacity-0 invisible pointer-events-none"
             }`}
           >
-            <span className="text-lg md:text-2xl font-bold font-['Playfair_Display'] tracking-wider text-[var(--color-primary)]">
+            <span className="text-lg md:text-2xl font-bold font-['Playfair_Display'] tracking-wider text-primary">
               TIK TOK | टिक टोक
             </span>
           </div>
@@ -72,7 +72,7 @@ const Navbar = ({ onGoToStencils, onGoToBlogs, onGoToHome }) => {
               <button
                 key={index}
                 onClick={link.action}
-                className="text-[var(--color-text)] hover:text-[var(--color-secondary)] font-semibold text-sm md:text-base transition-colors uppercase tracking-wide cursor-pointer bg-transparent border-none p-0"
+                className="text-text hover:text-secondary font-semibold text-sm md:text-base transition-colors uppercase tracking-wide cursor-pointer bg-transparent border-none p-0"
               >
                 {link.name}
               </button>
@@ -81,7 +81,7 @@ const Navbar = ({ onGoToStencils, onGoToBlogs, onGoToHome }) => {
 
           {/* Mobile Hamburger */}
           <button
-            className={`md:hidden text-[var(--color-primary)] text-xl bg-transparent border-none cursor-pointer p-1 transition-all duration-300 ${
+            className={`md:hidden text-primary text-xl bg-transparent border-none cursor-pointer p-1 transition-all duration-300 ${
               isScrolled
                 ? "opacity-100 visible"
                 : "opacity-0 invisible pointer-events-none"
@@ -96,16 +96,16 @@ const Navbar = ({ onGoToStencils, onGoToBlogs, onGoToHome }) => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-[70] bg-[var(--color-background)] flex flex-col shadow-2xl">
+        <div className="fixed inset-0 z-70 bg-background flex flex-col shadow-2xl">
           {/* Header */}
-          <div className="flex justify-between items-center px-5 py-4 border-b border-[var(--color-border)]">
-            <span className="text-lg font-bold font-['Playfair_Display'] text-[var(--color-primary)]">
+          <div className="flex justify-between items-center px-5 py-4 border-b border-border">
+            <span className="text-lg font-bold font-['Playfair_Display'] text-primary">
               TIK TOK | टिक टोक
             </span>
 
             <button
               onClick={() => setMobileMenuOpen(false)}
-              className="text-xl text-[var(--color-primary)] bg-transparent border-none cursor-pointer"
+              className="text-xl text-primary bg-transparent border-none cursor-pointer"
               aria-label="Close Menu"
             >
               <FaTimes />
@@ -118,7 +118,7 @@ const Navbar = ({ onGoToStencils, onGoToBlogs, onGoToHome }) => {
               <button
                 key={index}
                 onClick={link.action}
-                className="text-lg font-medium text-[var(--color-text)] text-left border-b border-[var(--color-border)] pb-3 bg-transparent border-t-0 border-l-0 border-r-0 transition-colors hover:text-[var(--color-secondary)]"
+                className="text-lg font-medium text-text text-left border-b border-border pb-3 bg-transparent border-t-0 border-l-0 border-r-0 transition-colors hover:text-secondary"
               >
                 {link.name}
               </button>

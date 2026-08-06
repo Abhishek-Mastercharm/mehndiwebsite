@@ -12,7 +12,7 @@ const OurBlogs = () => {
   );
 
   return (
-    <div className="min-h-screen bg-[var(--color-accent)]">
+    <div className="min-h-screen bg-accent">
       {/* Simple Hero */}
       <BlogHero />
 

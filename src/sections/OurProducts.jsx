@@ -1,4 +1,3 @@
-import React from 'react';
 import Section from '../components/ui/Section';
 import Card from '../components/ui/Card';
 
@@ -37,17 +36,17 @@ const OurProducts = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2 md:gap-3">
         {products.map((product, index) => (
           <Card key={index} variant="product" className="group p-2">
-            <div className="w-full bg-[var(--color-background)] rounded-lg mb-2 flex items-center justify-center overflow-hidden">
+            <div className="w-full bg-background rounded-lg mb-2 flex items-center justify-center overflow-hidden">
               <img 
                 src={product.image} 
                 alt={product.name} 
                 className="w-full h-auto object-contain"
               />
             </div>
-            <h3 className="text-sm font-bold font-['Playfair_Display'] text-[var(--color-primary)] mb-1 uppercase text-center">
+            <h3 className="text-sm font-bold font-['Playfair_Display'] text-primary mb-1 uppercase text-center">
               {product.name}
             </h3>
-            <p className="text-[var(--color-muted)] text-xs text-center">
+            <p className="text-muted text-xs text-center">
               {product.description}
             </p>
           </Card>

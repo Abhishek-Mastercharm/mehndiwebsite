@@ -3,19 +3,19 @@ import { FaPhone, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[var(--color-primary)] text-white">
+    <footer className="w-full bg-primary text-white">
       {/* Contact Strip */}
-      <div className="w-full border-b border-[var(--color-secondary)]/30">
+      <div className="w-full border-b border-secondary/30">
         <div className="max-w-4xl mx-auto px-4 py-4 md:py-6">
           {/* Always horizontal layout on all screens with a balanced gap */}
           <div className="flex flex-row items-center justify-center gap-6 sm:gap-12 md:gap-16">
             {/* Phone Number */}
             <a
               href="tel:+919501311070"
-              className="flex items-center gap-3 text-[var(--color-secondary)] hover:text-white transition-colors group"
+              className="flex items-center gap-3 text-secondary hover:text-white transition-colors group"
             >
               {/* Added scale-x-[-1] to flip the phone icon horizontally */}
-              <span className="bg-[var(--color-secondary)]/20 p-2 rounded-full group-hover:bg-[var(--color-secondary)] group-hover:text-[var(--color-primary)] transition-colors">
+              <span className="bg-secondary/20 p-2 rounded-full group-hover:bg-secondary group-hover:text-primary transition-colors">
                 <FaPhone className="w-5 h-5 md:w-6 md:h-6 scale-x-[-1]" />
               </span>
               <div className="text-left">
@@ -31,9 +31,9 @@ const Footer = () => {
             {/* Email Address */}
             <a
               href="mailto:aditya.marsexim@gmail.com"
-              className="flex items-center gap-3 text-[var(--color-secondary)] hover:text-white transition-colors group"
+              className="flex items-center gap-3 text-secondary hover:text-white transition-colors group"
             >
-              <span className="bg-[var(--color-secondary)]/20 p-2 rounded-full group-hover:bg-[var(--color-secondary)] group-hover:text-[var(--color-primary)] transition-colors">
+              <span className="bg-secondary/20 p-2 rounded-full group-hover:bg-secondary group-hover:text-primary transition-colors">
                 <FaEnvelope className="w-5 h-5 md:w-6 md:h-6" />
               </span>
               <div className="text-left">

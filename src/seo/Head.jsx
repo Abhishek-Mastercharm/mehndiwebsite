@@ -76,8 +76,8 @@ const Head = ({
       <meta name="owner" content="TIK TOK Mehndi" />
       <meta name="robots" content="index, follow, max-image-preview:large" />
       <link rel="canonical" href={canonicalUrl} />
-      <link rel="alternate" href={canonicalUrl} hreflang="en" />
-      <link rel="alternate" href={canonicalUrl} hreflang="x-default" />
+      <link rel="alternate" href={canonicalUrl} hrefLang="en" />
+      <link rel="alternate" href={canonicalUrl} hrefLang="x-default" />
 
       {/* ============================================= */}
       {/* OPEN GRAPH / FACEBOOK / INSTAGRAM / LINKEDIN   */}

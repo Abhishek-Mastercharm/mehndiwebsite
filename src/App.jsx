@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import {
   HashRouter as Router,
   Routes,
@@ -19,29 +19,22 @@ import MehndiStencils from './sections/MehndiStencils';
 import OurBlogs from './sections/OurBlogs';
 import BlogDetails from './components/blogs/BlogDetails';
 
-// Lazy loaded components (below the fold)
-const About = lazy(() => import('./sections/About'));
-const WhyChooseUs = lazy(() => import('./sections/WhyChooseUs'));
+// Lazy loaded components (below the fold) - only existing files
 const OurProducts = lazy(() => import('./sections/OurProducts'));
 const OtherProducts = lazy(() => import('./sections/OtherProducts'));
-const ExportCountries = lazy(() => import('./sections/ExportCountries'));
-const BecomeDistributor = lazy(() => import('./sections/BecomeDistributor'));
 const Gallery = lazy(() => import('./sections/Gallery'));
-const Testimonials = lazy(() => import('./sections/Testimonials'));
-const FAQ = lazy(() => import('./sections/FAQ'));
-const Contact = lazy(() => import('./sections/Contact'));
 
 // Loading fallback for lazy components
 const SectionLoader = () => (
   <div className="w-full py-24 flex justify-center items-center">
-    <div className="w-12 h-12 border-4 border-[var(--color-primary)] border-t-[var(--color-secondary)] rounded-full animate-spin"></div>
+    <div className="w-12 h-12 border-4 border-primary border-t-secondary rounded-full animate-spin"></div>
   </div>
 );
 
 // HomePage Component with Show More toggle
 const HomePage = () => {
   const navigate = useNavigate();
-  const [showOtherCategories, setShowOtherCategories] = React.useState(false);
+  const [showOtherCategories, setShowOtherCategories] = useState(false);
   const goToStencils = () => {
     window.scrollTo(0, 0);
     navigate('/mehndi-stencils');
@@ -49,7 +42,7 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen flex flex-col font-['Inter']">
-      <main className="flex-grow">
+      <main className="grow">
         <Hero />
         <FeaturesStrip />
 
@@ -61,12 +54,12 @@ const HomePage = () => {
           <StencilsCTA onClick={goToStencils} />
 
           {/* Show More / Less Toggle Button */}
-          <div className="w-full bg-[var(--color-accent)] pb-4">
+          <div className="w-full bg-accent pb-4">
             <div className="container mx-auto flex justify-center">
               <button
                 onClick={() => setShowOtherCategories(!showOtherCategories)}
                 className="px-4 py-1.5 text-sm font-medium rounded border transition-colors duration-200
-                 hover:bg-[var(--color-primary)] hover:text-white"
+                 hover:bg-primary hover:text-white"
                 style={{
                   color: 'var(--color-primary)',
                   borderColor: 'var(--color-primary)',
@@ -98,15 +91,10 @@ const HomePage = () => {
 
 // Stencils Page
 const StencilsPage = () => {
-  const navigate = useNavigate();
-  const goToHome = () => {
-    window.scrollTo(0, 0);
-    navigate('/');
-  };
   return (
     <div className="min-h-screen flex flex-col font-['Inter']">
-      <main className="flex-grow">
-        <MehndiStencils onBack={goToHome} />
+      <main className="grow">
+        <MehndiStencils />
       </main>
     </div>
   );
@@ -114,15 +102,10 @@ const StencilsPage = () => {
 
 // Blogs Page
 const BlogsPage = () => {
-  const navigate = useNavigate();
-  const goToHome = () => {
-    window.scrollTo(0, 0);
-    navigate('/');
-  };
   return (
     <div className="min-h-screen flex flex-col font-['Inter']">
-      <main className="flex-grow">
-        <OurBlogs onBack={goToHome} />
+      <main className="grow">
+        <OurBlogs />
       </main>
     </div>
   );
@@ -153,7 +136,7 @@ const NavbarWithRouter = () => {
 const BlogDetailsPage = () => {
   return (
     <div className="min-h-screen flex flex-col font-['Inter']">
-      <main className="flex-grow">
+      <main className="grow">
         <BlogDetails />
       </main>
     </div>

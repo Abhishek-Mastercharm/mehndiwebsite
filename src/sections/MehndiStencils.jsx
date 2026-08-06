@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Section from '../components/ui/Section';
-import { FaArrowLeft } from 'react-icons/fa';
 import ReusableLightbox from '../components/ui/ReusableLightbox';
 
 // Edit this array to add/remove/update stencil images
@@ -57,7 +56,7 @@ const stencilImages = [
   },
 ];
 
-const MehndiStencils = ({ onBack }) => {
+const MehndiStencils = () => {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -109,7 +108,7 @@ const MehndiStencils = ({ onBack }) => {
               <div
                 key={image.id}
                 onClick={() => openLightbox(index)}
-                className="aspect-square bg-[var(--color-background)] rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition-opacity flex items-center justify-center shadow-md hover:shadow-lg border border-[var(--color-border)]"
+                className="aspect-square bg-background rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition-opacity flex items-center justify-center shadow-md hover:shadow-lg border border-border"
               >
                 <img
                   src={image.src}

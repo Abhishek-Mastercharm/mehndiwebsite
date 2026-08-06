@@ -1,7 +1,4 @@
-import React from 'react';
-
 const phone = "919501311070";
-const email = "me.overseas.llc@gmail.com";
 const message = encodeURIComponent(
   "Hi! I am interested in your products. Could you please share more details?",
 );

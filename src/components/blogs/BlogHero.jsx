@@ -1,8 +1,6 @@
-import React from "react";
-
 const BlogHero = () => {
   return (
-    <section className="relative bg-gradient-to-r from-red-700 via-red-600 to-red-500 text-white overflow-hidden">
+    <section className="relative bg-linear-to-r from-red-700 via-red-600 to-red-500 text-white overflow-hidden">
       <div className="absolute inset-0 bg-black/25"></div>
 
       <div className="relative container mx-auto px-5 py-24 lg:py-32">

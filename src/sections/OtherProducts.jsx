@@ -39,7 +39,7 @@ const OtherProducts = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) =>
-        prev === sliderImages.length - 1 ? 0 : prev + 1,
+        prev === SLIDER_COUNT - 1 ? 0 : prev + 1,
       );
     }, 4000);
 
@@ -69,7 +69,7 @@ const OtherProducts = () => {
         <div className="relative py-0.5 overflow-hidden">
           {/* Slider Area */}
           <div
-            className="relative flex items-center justify-center h-[320px] md:h-[430px] lg:h-[520px]"
+            className="relative flex items-center justify-center h-80 md:h-107.5 lg:h-130"
             style={{ perspective: "1400px" }}
           >
             {sliderImages.map((image, index) => {
@@ -106,13 +106,13 @@ const OtherProducts = () => {
                   }}
                 >
                   <div
-                    className={`overflow-hidden rounded-2xl bg-white border border-[var(--color-border)] shadow-xl
+                    className={`overflow-hidden rounded-2xl bg-white border border-border shadow-xl
                     ${
                       isActive
-                        ? "w-[320px] md:w-[520px] lg:w-[700px]"
-                        : "w-[220px] md:w-[360px] lg:w-[460px]"
+                        ? "w-80 md:w-130 lg:w-175"
+                        : "w-55 md:w-90 lg:w-115"
                     }
-                    aspect-[16/10]`}
+                    aspect-16/10`}
                   >
                     <img
                       src={image.src}
@@ -128,7 +128,7 @@ const OtherProducts = () => {
           {/* Previous */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 md:left-4 top-1/2 -translate-y-1/2 z-30 bg-[var(--color-primary)] text-white w-12 h-12 rounded-full flex items-center justify-center shadow-xl hover:bg-[var(--color-secondary)] transition"
+            className="absolute left-0 md:left-4 top-1/2 -translate-y-1/2 z-30 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-xl hover:bg-secondary transition"
           >
             <FaChevronLeft />
           </button>
@@ -136,7 +136,7 @@ const OtherProducts = () => {
           {/* Next */}
           <button
             onClick={nextSlide}
-            className="absolute right-0 md:right-4 top-1/2 -translate-y-1/2 z-30 bg-[var(--color-primary)] text-white w-12 h-12 rounded-full flex items-center justify-center shadow-xl hover:bg-[var(--color-secondary)] transition"
+            className="absolute right-0 md:right-4 top-1/2 -translate-y-1/2 z-30 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-xl hover:bg-secondary transition"
           >
             <FaChevronRight />
           </button>
@@ -149,7 +149,7 @@ const OtherProducts = () => {
                 onClick={() => setCurrentSlide(index)}
                 className={`transition-all duration-300 rounded-full ${
                   currentSlide === index
-                    ? "w-8 h-3 bg-[var(--color-secondary)]"
+                    ? "w-8 h-3 bg-secondary"
                     : "w-3 h-3 bg-gray-300"
                 }`}
               />
@@ -165,12 +165,12 @@ const OtherProducts = () => {
           onClose={() => setIsLightboxOpen(false)}
           onNext={() =>
             setLightboxIndex((prev) =>
-              prev === sliderImages.length - 1 ? 0 : prev + 1,
+              prev === SLIDER_COUNT - 1 ? 0 : prev + 1,
             )
           }
           onPrev={() =>
             setLightboxIndex((prev) =>
-              prev === 0 ? sliderImages.length - 1 : prev - 1,
+              prev === 0 ? SLIDER_COUNT - 1 : prev - 1,
             )
           }
         />
