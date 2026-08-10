@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Vercel (used by CLI only; not needed for Git-based deploy)
+.vercel
+.vercel-tmp
