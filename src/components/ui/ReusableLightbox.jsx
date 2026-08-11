@@ -5,7 +5,7 @@ const ReusableLightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => 
   if (!images || images.length === 0) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-2 md:p-4">
+    <div className="fixed inset-0 z-[999] bg-black/95 flex items-center justify-center p-2 md:p-4">
       {/* Close Button */}
       <button
         onClick={onClose}
