@@ -4,20 +4,24 @@ import { Helmet } from 'react-helmet-async';
 const Head = ({ 
   title = "TIK TOK Mehndi - Premium Export Quality Henna Cones", 
   description = "TIK TOK Mehndi manufactures and exports premium, 100% natural henna mehndi cones. Rich colour, smooth flow, and long-lasting stain — trusted by bridal mehndi artists, wholesalers and retailers worldwide for weddings, Eid, Diwali and festivals.",
-  canonicalUrl = "https://tiktokmehndi.com",
-  image = "https://tiktokmehndi.com/og-image.webp",
+  canonicalUrl,
+  image,
   keywords = "TIK TOK Mehndi, mehndi cone, henna cone, bridal mehndi, export mehndi, natural henna, red cone mehndi",
   type = "website"
 }) => {
+  const currentOrigin = typeof window !== 'undefined' ? window.location.origin : "https://mehndiwebsite.vercel.app";
+  const activeCanonical = canonicalUrl || `${currentOrigin}${typeof window !== 'undefined' ? window.location.pathname : '/'}`;
+  const activeImage = image || `${currentOrigin}/og-image.webp`;
+
   // Schema.org Structured Data - Organization
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "TIK TOK Mehndi",
     "alternateName": "TIK TOK",
-    "url": canonicalUrl,
-    "logo": `https://tiktokmehndi.com/logo.webp`,
-    "image": image,
+    "url": activeCanonical,
+    "logo": `${currentOrigin}/logo.webp`,
+    "image": activeImage,
     "founder": "TIK TOK Mehndi",
     "owner": {
       "@type": "Organization",
@@ -40,8 +44,8 @@ const Head = ({
     "@type": "Product",
     "name": "TIK TOK Premium Mehndi Cone",
     "image": [
-      image,
-      "https://tiktokmehndi.com/images/product1.webp"
+      activeImage,
+      `${currentOrigin}/images/product1.webp`
     ],
     "description": description,
     "brand": {
@@ -75,20 +79,20 @@ const Head = ({
       <meta name="author" content="TIK TOK Mehndi" />
       <meta name="owner" content="TIK TOK Mehndi" />
       <meta name="robots" content="index, follow, max-image-preview:large" />
-      <link rel="canonical" href={canonicalUrl} />
-      <link rel="alternate" href={canonicalUrl} hrefLang="en" />
-      <link rel="alternate" href={canonicalUrl} hrefLang="x-default" />
+      <link rel="canonical" href={activeCanonical} />
+      <link rel="alternate" href={activeCanonical} hrefLang="en" />
+      <link rel="alternate" href={activeCanonical} hrefLang="x-default" />
 
       {/* ============================================= */}
       {/* OPEN GRAPH / FACEBOOK / INSTAGRAM / LINKEDIN   */}
       {/* ============================================= */}
       <meta property="og:site_name" content="TIK TOK Mehndi" />
       <meta property="og:type" content={type} />
-      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:url" content={activeCanonical} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:image:secure_url" content={image} />
+      <meta property="og:image" content={activeImage} />
+      <meta property="og:image:secure_url" content={activeImage} />
       <meta property="og:image:type" content="image/webp" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
@@ -102,10 +106,10 @@ const Head = ({
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:site" content="@tiktokmehndi" />
       <meta property="twitter:creator" content="@tiktokmehndi" />
-      <meta property="twitter:url" content={canonicalUrl} />
+      <meta property="twitter:url" content={activeCanonical} />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={image} />
+      <meta property="twitter:image" content={activeImage} />
       <meta property="twitter:image:width" content="1200" />
       <meta property="twitter:image:height" content="630" />
       <meta property="twitter:image:alt" content={title} />

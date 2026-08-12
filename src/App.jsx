@@ -1,6 +1,6 @@
 import { lazy, Suspense, useState } from 'react';
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Routes,
   Route,
   Navigate,
@@ -42,6 +42,10 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen flex flex-col font-['Inter']">
+      <Head 
+        title="TIK TOK Mehndi - Premium Export Quality Henna Cones" 
+        description="TIK TOK Mehndi manufactures and exports premium, 100% natural henna mehndi cones. Smooth flow, rich red stain - trusted by bridal mehndi artists, wholesalers and retailers worldwide." 
+      />
       <main className="grow">
         <Hero />
         <FeaturesStrip />
@@ -93,6 +97,10 @@ const HomePage = () => {
 const StencilsPage = () => {
   return (
     <div className="min-h-screen flex flex-col font-['Inter']">
+      <Head 
+        title="Easy Mehndi Stencils Designs - TIK TOK Mehndi" 
+        description="Explore premium reusable Mehndi stencils by TIK TOK Mehndi. Beautiful patterns, easy to apply, perfect for weddings, Eid, Diwali and quick henna designs." 
+      />
       <main className="grow">
         <MehndiStencils />
       </main>
@@ -104,6 +112,10 @@ const StencilsPage = () => {
 const BlogsPage = () => {
   return (
     <div className="min-h-screen flex flex-col font-['Inter']">
+      <Head 
+        title="Latest Mehndi Blogs & Henna Tips - TIK TOK Mehndi" 
+        description="Read our expert tips on how to get dark mehndi color naturally, best festival design ideas, and professional product guides." 
+      />
       <main className="grow">
         <OurBlogs />
       </main>
@@ -157,7 +169,6 @@ const Layout = ({ children }) => {
 function App() {
   return (
     <HelmetProvider>
-      <Head />
       <Router>
         <Routes>
           {/* Home */}

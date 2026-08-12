@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { blogs } from "../../data/blog";
 import { FaCheckCircle } from "react-icons/fa";
+import Head from "../../seo/Head";
 
 const BlogDetails = () => {
   const { slug } = useParams();
@@ -24,7 +25,13 @@ const BlogDetails = () => {
 
   // ---- Simple Blog View ----
   return (
-    <div className="min-h-screen bg-accent py-6 md:py-10">
+    <>
+      <Head 
+        title={`${blog.title} - TIK TOK Mehndi`}
+        description={blog.excerpt || blog.content.substring(0, 160)}
+        type="article"
+      />
+      <div className="min-h-screen bg-accent py-6 md:py-10">
       <div className="container mx-auto px-4 md:px-8 max-w-4xl">
         {/* Blog Card */}
         <article className="bg-white rounded-2xl md:rounded-3xl shadow-lg overflow-hidden">
@@ -81,6 +88,7 @@ const BlogDetails = () => {
         </article>
       </div>
     </div>
+    </>
   );
 };
 
