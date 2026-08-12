@@ -43,7 +43,7 @@ const OurProducts = () => {
                 className="w-full h-auto object-contain"
               />
             </div>
-            <h3 className="text-sm font-bold font-['Playfair_Display'] text-primary mb-1 uppercase text-center">
+            <h3 className="text-sm font-bold font-serif text-primary mb-1 uppercase text-center">
               {product.name}
             </h3>
             <p className="text-muted text-xs text-center">

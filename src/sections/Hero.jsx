@@ -15,7 +15,7 @@ const Hero = () => {
         />
         {/* TIK TOK Logo Text */}
         <div className="absolute top-2 left-2 md:top-8 md:left-8">
-          <h1 className="text-lg md:text-2xl lg:text-4xl font-black text-white/90 drop-shadow-lg tracking-widest font-['Playfair_Display']">
+          <h1 className="text-lg md:text-2xl lg:text-4xl font-black text-white/90 drop-shadow-lg tracking-widest font-serif">
             TIK TOK | टिक टोक
           </h1>
         </div>

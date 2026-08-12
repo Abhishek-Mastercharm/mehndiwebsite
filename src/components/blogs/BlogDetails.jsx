@@ -53,7 +53,7 @@ const BlogDetails = () => {
             </div>
 
             {/* Title */}
-            <h1 className="text-2xl md:text-4xl font-bold text-gray-900 leading-tight mb-5 font-['Playfair_Display']">
+            <h1 className="text-2xl md:text-4xl font-bold text-gray-900 leading-tight mb-5 font-serif">
               {blog.title}
             </h1>
 

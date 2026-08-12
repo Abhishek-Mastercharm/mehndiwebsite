@@ -14,6 +14,7 @@
   --color-muted: var(--muted);
   --color-dark: var(--dark);
   --color-light: var(--light);
+  --font-serif: "Times New Roman", Times, Georgia, serif;
 }
 
 @layer base {
@@ -26,7 +27,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Playfair Display", serif;
+    font-family: "Times New Roman", Times, Georgia, serif;
   }
 }
 

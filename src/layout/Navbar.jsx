@@ -55,7 +55,7 @@ const Navbar = ({ onGoToStencils, onGoToBlogs, onGoToHome }) => {
                 : "opacity-0 invisible pointer-events-none"
             }`}
           >
-            <span className="text-lg md:text-2xl font-bold font-['Playfair_Display'] tracking-wider text-primary">
+            <span className="text-lg md:text-2xl font-bold font-serif tracking-wider text-primary">
               TIK TOK | टिक टोक
             </span>
           </div>
@@ -99,7 +99,7 @@ const Navbar = ({ onGoToStencils, onGoToBlogs, onGoToHome }) => {
         <div className="fixed inset-0 z-70 bg-background flex flex-col shadow-2xl">
           {/* Header */}
           <div className="flex justify-between items-center px-5 py-4 border-b border-border">
-            <span className="text-lg font-bold font-['Playfair_Display'] text-primary">
+            <span className="text-lg font-bold font-serif text-primary">
               TIK TOK | टिक टोक
             </span>
 

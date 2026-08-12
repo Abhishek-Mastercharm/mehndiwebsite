@@ -22,7 +22,7 @@ const FeaturedBlog = ({ blog }) => {
             Featured
           </span>
 
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mt-5 group-hover:text-primary transition-colors font-['Playfair_Display']">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mt-5 group-hover:text-primary transition-colors font-serif">
             {blog.title}
           </h2>
 
