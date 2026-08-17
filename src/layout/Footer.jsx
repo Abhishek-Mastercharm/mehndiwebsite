@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="flex flex-row items-center justify-center gap-6 sm:gap-12 md:gap-16">
             {/* Phone Number */}
             <a
-              href="tel:+919501311070"
+              href="tel:+971588853984"
               className="flex items-center gap-3 text-secondary hover:text-white transition-colors group"
             >
               {/* Added scale-x-[-1] to flip the phone icon horizontally */}
@@ -23,14 +23,14 @@ const Footer = () => {
                   Call Us
                 </div>
                 <div className="font-bold text-xs sm:text-sm md:text-base whitespace-nowrap">
-                  +91 9501311070
+                  +971-588853984
                 </div>
               </div>
             </a>
 
             {/* Email Address */}
             <a
-              href="mailto:aditya.marsexim@gmail.com"
+              href="mailto:me.overseas.llc@gmail.com"
               className="flex items-center gap-3 text-secondary hover:text-white transition-colors group"
             >
               <span className="bg-secondary/20 p-2 rounded-full group-hover:bg-secondary group-hover:text-primary transition-colors">
@@ -41,7 +41,7 @@ const Footer = () => {
                   Email Us
                 </div>
                 <div className="font-bold text-xs sm:text-sm md:text-base whitespace-nowrap">
-                  aditya.marsexim@gmail.com
+                  me.overseas.llc@gmail.com
                 </div>
               </div>
             </a>
