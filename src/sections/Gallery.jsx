@@ -20,6 +20,8 @@ const Gallery = () => {
     { id: 14, src: "/images/gallery/gallery (14).webp", alt: "Gallery 14" },
     { id: 15, src: "/images/gallery/gallery (15).webp", alt: "Gallery 15" },
     { id: 16, src: "/images/gallery/gallery (16).webp", alt: "Gallery 16" },
+    { id: 17, src: "/images/gallery/gallery (17).webp", alt: "Gallery 17" },
+    { id: 18, src: "/images/gallery/gallery (18).webp", alt: "Gallery 18" },
   ];
 
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
