@@ -23,6 +23,7 @@ import BlogDetails from './components/blogs/BlogDetails';
 const OurProducts = lazy(() => import('./sections/OurProducts'));
 const OtherProducts = lazy(() => import('./sections/OtherProducts'));
 const Gallery = lazy(() => import('./sections/Gallery'));
+const ProductVideo = lazy(() => import('./sections/ProductVideo'));
 
 // Loading fallback for lazy components
 const SectionLoader = () => (
@@ -54,6 +55,7 @@ const HomePage = () => {
           {/* <About /> */}
           {/* <WhyChooseUs /> */}
           <OurProducts />
+          <ProductVideo />
           {/* Stencils CTA Button - Before Other Categories */}
           <StencilsCTA onClick={goToStencils} />
 
