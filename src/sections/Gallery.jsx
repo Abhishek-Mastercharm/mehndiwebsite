@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Section from '../components/ui/Section';
 import ReusableLightbox from '../components/ui/ReusableLightbox';
+import Button from '../components/ui/Button';
 
 const Gallery = () => {
   const galleryImages = [
@@ -26,6 +27,13 @@ const Gallery = () => {
 
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showAll, setShowAll] = useState(false);
+
+  // From here we are displaying the images (Max images shwon more button)
+  // If showAll is true, we display all images
+  // If showAll is false, we display only the first 13 images
+  // We are using slice method to get the first 13 images
+  const displayedImages = showAll ? galleryImages : galleryImages.slice(0, -6);
 
   const openLightbox = (index) => {
     setCurrentImageIndex(index);
@@ -38,13 +46,13 @@ const Gallery = () => {
 
   const nextImage = () => {
     setCurrentImageIndex((prev) =>
-      prev === galleryImages.length - 1 ? 0 : prev + 1
+      prev === displayedImages.length - 1 ? 0 : prev + 1
     );
   };
 
   const prevImage = () => {
     setCurrentImageIndex((prev) =>
-      prev === 0 ? galleryImages.length - 1 : prev - 1
+      prev === 0 ? displayedImages.length - 1 : prev - 1
     );
   };
 
@@ -57,7 +65,7 @@ const Gallery = () => {
         padding="py-8 md:py-12"
       >
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
-          {galleryImages.map((image, index) => (
+          {displayedImages.map((image, index) => (
             <div
               key={image.id}
               onClick={() => openLightbox(index)}
@@ -71,12 +79,22 @@ const Gallery = () => {
             </div>
           ))}
         </div>
+
+        <div className="flex justify-center mt-6">
+          <Button
+            onClick={() => setShowAll(!showAll)}
+            variant="outline"
+            size="md"
+          >
+            {showAll ? 'Show Less' : 'Show More Images'}
+          </Button>
+        </div>
       </Section>
 
       {/* Reusable Lightbox */}
       {isLightboxOpen && (
         <ReusableLightbox
-          images={galleryImages}
+          images={displayedImages}
           currentIndex={currentImageIndex}
           onClose={closeLightbox}
           onNext={nextImage}
