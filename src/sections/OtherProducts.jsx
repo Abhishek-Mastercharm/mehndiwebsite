@@ -3,22 +3,22 @@ import Section from "../components/ui/Section";
 import ReusableLightbox from "../components/ui/ReusableLightbox";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const OtherProducts = () => {
-  const sliderImages = [
-    {
-      id: 1,
-      src: "/images/slider/silder (1).webp",
-      alt: "Hair Dye & Hair Care",
-    },
-    { id: 2, src: "/images/slider/silder (2).webp", alt: "Beauty & Cosmatics" },
-    {
-      id: 3,
-      src: "/images/slider/silder (3).webp",
-      alt: "Traditional Beauty Products",
-    },
-    { id: 4, src: "/images/slider/silder (4).webp", alt: "Accessories" },
-  ];
+const sliderImages = [
+  {
+    id: 1,
+    src: "/images/slider/silder (1).webp",
+    alt: "Hair Dye & Hair Care",
+  },
+  { id: 2, src: "/images/slider/silder (2).webp", alt: "Beauty & Cosmatics" },
+  {
+    id: 3,
+    src: "/images/slider/silder (3).webp",
+    alt: "Traditional Beauty Products",
+  },
+  { id: 4, src: "/images/slider/silder (4).webp", alt: "Accessories" },
+];
 
+const OtherProducts = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
@@ -39,7 +39,7 @@ const OtherProducts = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) =>
-        prev === SLIDER_COUNT - 1 ? 0 : prev + 1,
+        prev === sliderImages.length - 1 ? 0 : prev + 1,
       );
     }, 4000);
 
@@ -165,12 +165,12 @@ const OtherProducts = () => {
           onClose={() => setIsLightboxOpen(false)}
           onNext={() =>
             setLightboxIndex((prev) =>
-              prev === SLIDER_COUNT - 1 ? 0 : prev + 1,
+              prev === sliderImages.length - 1 ? 0 : prev + 1,
             )
           }
           onPrev={() =>
             setLightboxIndex((prev) =>
-              prev === 0 ? SLIDER_COUNT - 1 : prev - 1,
+              prev === 0 ? sliderImages.length - 1 : prev - 1,
             )
           }
         />
