@@ -52,11 +52,8 @@ const HomePage = () => {
         <FeaturesStrip />
 
         <Suspense fallback={<SectionLoader />}>
-          {/* <About /> */}
-          {/* <WhyChooseUs /> */}
           <OurProducts />
           <ProductVideo />
-          {/* Stencils CTA Button - Before Other Categories */}
           <StencilsCTA onClick={goToStencils} />
 
           {/* Show More / Less Toggle Button */}
@@ -82,13 +79,7 @@ const HomePage = () => {
 
           {/* Other Categories - Conditional Render */}
           {showOtherCategories && <OtherProducts />}
-
-          {/* <ExportCountries /> */}
-          {/* <BecomeDistributor /> */}
           <Gallery />
-          {/* <Testimonials /> */}
-          {/* <FAQ /> */}
-          {/* <Contact /> */}
         </Suspense>
       </main>
     </div>
