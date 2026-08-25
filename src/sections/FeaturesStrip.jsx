@@ -1,5 +1,3 @@
-import React from 'react';
-
 const FeaturesStrip = () => {
   return (
     <div className="w-full">

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { FaPlay, FaTimes, FaExpand } from 'react-icons/fa';
 import Section from '../components/ui/Section';
 

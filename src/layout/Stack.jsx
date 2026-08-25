@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const Stack = ({ children, className = '', gap = '4', as = 'div' }) => {
   const Component = as;
   return (

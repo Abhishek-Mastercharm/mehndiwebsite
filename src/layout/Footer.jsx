@@ -1,4 +1,3 @@
-import React from "react";
 import { FaPhone, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {

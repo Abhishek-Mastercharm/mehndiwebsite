@@ -1,4 +1,3 @@
-import React from "react";
 import Section from "../components/ui/Section";
 import BlogHero from "../components/blogs/BlogHero";
 import FeaturedBlog from "../components/blogs/FeaturedBlog";

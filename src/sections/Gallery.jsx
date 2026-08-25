@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Section from '../components/ui/Section';
 import ReusableLightbox from '../components/ui/ReusableLightbox';
 import Button from '../components/ui/Button';
