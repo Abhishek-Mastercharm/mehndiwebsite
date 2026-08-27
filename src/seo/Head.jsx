@@ -1,68 +1,65 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Head = ({ 
-  title = "TIK TOK Mehndi - Premium Export Quality Henna Cones", 
+const Head = ({
+  title = "TIK TOK Mehndi - Premium Export Quality Henna Cones",
   description = "TIK TOK Mehndi manufactures and exports premium, 100% natural henna mehndi cones. Rich colour, smooth flow, and long-lasting stain — trusted by bridal mehndi artists, wholesalers and retailers worldwide for weddings, Eid, Diwali and festivals.",
-  canonicalUrl = "https://tiktokmehndi.com",
-  image = "https://tiktokmehndi.com/og-image.webp",
+  canonicalUrl = "https://mehndiwebsite.vercel.app",
+  image = "https://mehndiwebsite.vercel.app/og-image.webp",
   keywords = "TIK TOK Mehndi, mehndi cone, henna cone, bridal mehndi, export mehndi, natural henna, red cone mehndi",
-  type = "website"
+  type = "website",
 }) => {
   // Schema.org Structured Data - Organization
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "TIK TOK Mehndi",
-    "alternateName": "TIK TOK",
-    "url": canonicalUrl,
-    "logo": `https://tiktokmehndi.com/logo.webp`,
-    "image": image,
-    "founder": "TIK TOK Mehndi",
-    "owner": {
+    name: "TIK TOK Mehndi",
+    alternateName: "TIK TOK",
+    url: canonicalUrl,
+    logo: `https://mehndiwebsite.vercel.app/logo.webp`,
+    image: image,
+    founder: "TIK TOK Mehndi",
+    owner: {
       "@type": "Organization",
-      "name": "TIK TOK Mehndi"
+      name: "TIK TOK Mehndi",
     },
-    "email": "me.overseas.llc@gmail.com",
-    "telephone": "+91-95013-11070",
-    "contactPoint": {
+    email: "me.overseas.llc@gmail.com",
+    telephone: "+91-95013-11070",
+    contactPoint: {
       "@type": "ContactPoint",
-      "telephone": "+91-95013-11070",
-      "contactType": "customer service",
-      "areaServed": "Worldwide",
-      "availableLanguage": ["English", "Hindi"]
-    }
+      telephone: "+91-95013-11070",
+      contactType: "customer service",
+      areaServed: "Worldwide",
+      availableLanguage: ["English", "Hindi"],
+    },
   };
 
   // Schema.org - Product
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "TIK TOK Premium Mehndi Cone",
-    "image": [
-      image,
-      "https://tiktokmehndi.com/images/product1.webp"
-    ],
-    "description": description,
-    "brand": {
+    name: "TIK TOK Premium Mehndi Cone",
+    image: [image, "https://mehndiwebsite.vercel.app/images/product1.webp"],
+    description: description,
+    brand: {
       "@type": "Brand",
-      "name": "TIK TOK Mehndi"
+      name: "TIK TOK Mehndi",
     },
-    "manufacturer": {
+    manufacturer: {
       "@type": "Organization",
-      "name": "TIK TOK Mehndi"
+      name: "TIK TOK Mehndi",
     },
-    "offers": {
+    offers: {
       "@type": "AggregateOffer",
-      "priceCurrency": "INR",
-      "availability": "https://schema.org/InStock",
-      "itemCondition": "https://schema.org/NewCondition"
+      priceCurrency: "INR",
+      availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
     },
-    "aggregateRating": {
+    aggregateRating: {
       "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "1000"
-    }
+      ratingValue: "4.8",
+      reviewCount: "1000",
+    },
   };
 
   return (
@@ -112,7 +109,10 @@ const Head = ({
 
       {/* WhatsApp specific: ensure image is declared clearly  */}
       {/* (WhatsApp crawlers prefer first declared og:image + dimensions) */}
-      <meta property="og:updated_time" content={new Date().toISOString().split('T')[0]} />
+      <meta
+        property="og:updated_time"
+        content={new Date().toISOString().split("T")[0]}
+      />
 
       {/* ============================================= */}
       {/* STRUCTURED DATA / JSON-LD (SCHEMA.ORG)         */}
