@@ -16,7 +16,7 @@ const Head = ({
     name: "TIK TOK Mehndi",
     alternateName: "TIK TOK",
     url: canonicalUrl,
-    logo: `https://mehndiwebsite.vercel.app/logo.webp`,
+    logo: `https://mehndiwebsite.vercel.app/images/product1.webp`,
     image: image,
     founder: "TIK TOK Mehndi",
     owner: {
@@ -87,7 +87,7 @@ const Head = ({
       <meta property="og:image" content={image} />
       <meta property="og:image:secure_url" content={image} />
       <meta property="og:image:type" content="image/jpeg" />
-      <meta property="og:image:width" content="1190" />
+      <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content={title} />
       <meta property="og:locale" content="en_US" />
@@ -103,16 +103,9 @@ const Head = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      <meta name="twitter:image:width" content="1190" />
+      <meta name="twitter:image:width" content="1200" />
       <meta name="twitter:image:height" content="630" />
       <meta name="twitter:image:alt" content={title} />
-
-      {/* WhatsApp specific: ensure image is declared clearly  */}
-      {/* (WhatsApp crawlers prefer first declared og:image + dimensions) */}
-      <meta
-        property="og:updated_time"
-        content={new Date().toISOString().split("T")[0]}
-      />
 
       {/* ============================================= */}
       {/* STRUCTURED DATA / JSON-LD (SCHEMA.ORG)         */}

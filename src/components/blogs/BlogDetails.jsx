@@ -30,6 +30,7 @@ const BlogDetails = () => {
         title={`${blog.title} - TIK TOK Mehndi`}
         description={blog.excerpt || blog.content.substring(0, 160)}
         type="article"
+        image={blog.image ? `https://mehndiwebsite.vercel.app${blog.image}` : "https://mehndiwebsite.vercel.app/images/og-image.jpg"}
       />
       <div className="min-h-screen bg-accent py-6 md:py-10">
       <div className="container mx-auto px-4 md:px-8 max-w-4xl">
