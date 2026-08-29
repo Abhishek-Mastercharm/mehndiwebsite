@@ -57,6 +57,7 @@ const ProductVideo = () => {
             className="w-full h-full object-contain"
             onPlay={() => setIsPlaying(true)}
             onPause={() => setIsPlaying(false)}
+            aria-label="TIK TOK Mehndi product showcase video - premium export quality henna mehndi cones in action, bridal cone, red cone, black cone, herbal cone natural henna products India"
           />
 
           {/* Overlay (Shown only when not playing) */}

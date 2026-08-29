@@ -7,15 +7,15 @@ const sliderImages = [
   {
     id: 1,
     src: "/images/slider/silder (1).webp",
-    alt: "Hair Dye & Hair Care",
+    alt: "Hair dye and hair care products by TIK TOK Mehndi - natural hair colour henna based beauty products India",
   },
-  { id: 2, src: "/images/slider/silder (2).webp", alt: "Beauty & Cosmatics" },
+  { id: 2, src: "/images/slider/silder (2).webp", alt: "Beauty and cosmetics herbal products - premium traditional skincare and henna beauty range TIK TOK Mehndi official" },
   {
     id: 3,
     src: "/images/slider/silder (3).webp",
-    alt: "Traditional Beauty Products",
+    alt: "Traditional Indian beauty products collection - herbal henna, mehndi cones, natural cosmetics wholesale supplier India",
   },
-  { id: 4, src: "/images/slider/silder (4).webp", alt: "Accessories" },
+  { id: 4, src: "/images/slider/silder (4).webp", alt: "Mehndi and beauty accessories - henna application tools, bridal jewellery, traditional beauty accessories TIK TOK Mehndi" },
 ];
 
 const OtherProducts = () => {

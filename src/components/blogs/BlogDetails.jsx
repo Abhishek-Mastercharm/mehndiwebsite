@@ -30,6 +30,7 @@ const BlogDetails = () => {
         title={`${blog.title} - TIK TOK Mehndi`}
         description={blog.excerpt || blog.content.substring(0, 160)}
         type="article"
+        keywords={blog.keywords || undefined}
         image={blog.image ? `https://mehndiwebsite.vercel.app${blog.image}` : "https://mehndiwebsite.vercel.app/images/og-image.jpg"}
       />
       <div className="min-h-screen bg-accent py-6 md:py-10">
@@ -39,7 +40,8 @@ const BlogDetails = () => {
           {/* Single Blog Image */}
           <img
             src={blog.image}
-            alt={blog.title}
+            alt={blog.imageAlt || blog.title}
+            title={blog.title + " - TIK TOK Mehndi blog - " + blog.category}
             className="w-full h-56 md:h-80 object-cover"
           />
 

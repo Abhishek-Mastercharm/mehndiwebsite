@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="relative w-full">
         <img
           src="/images/hero.webp"
-          alt="Hero Banner"
+          alt="TIK TOK Mehndi premium export quality henna cones banner - bridal red cone, fast colour mehndi products India"
           className="w-full h-auto object-contain"
         />
         {/* TIK TOK Logo Text */}

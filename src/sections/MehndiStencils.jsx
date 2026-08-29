@@ -5,55 +5,23 @@ import ReusableLightbox from '../components/ui/ReusableLightbox';
 // Edit this array to add/remove/update stencil images
 // Just change the number in the filename and extension as needed
 const stencilImages = [
-  { id: 1, src: "/images/mehndiStencils/stencils (1).webp", alt: "Stencil 1" },
-  { id: 2, src: "/images/mehndiStencils/stencils (2).webp", alt: "Stencil 2" },
-  { id: 3, src: "/images/mehndiStencils/stencils (3).webp", alt: "Stencil 3" },
-  { id: 4, src: "/images/mehndiStencils/stencils (4).webp", alt: "Stencil 4" },
-  { id: 5, src: "/images/mehndiStencils/stencils (5).webp", alt: "Stencil 5" },
-  { id: 6, src: "/images/mehndiStencils/stencils (6).webp", alt: "Stencil 6" },
-  { id: 7, src: "/images/mehndiStencils/stencils (7).webp", alt: "Stencil 7" },
-  { id: 8, src: "/images/mehndiStencils/stencils (8).webp", alt: "Stencil 8" },
-  { id: 9, src: "/images/mehndiStencils/stencils (9).webp", alt: "Stencil 9" },
-  {
-    id: 10,
-    src: "/images/mehndiStencils/stencils (10).webp",
-    alt: "Stencil 10",
-  },
-  {
-    id: 11,
-    src: "/images/mehndiStencils/stencils (11).webp",
-    alt: "Stencil 11",
-  },
-  {
-    id: 12,
-    src: "/images/mehndiStencils/stencils (12).webp",
-    alt: "Stencil 12",
-  },
-  {
-    id: 13,
-    src: "/images/mehndiStencils/stencils (13).webp",
-    alt: "Stencil 13",
-  },
-  {
-    id: 14,
-    src: "/images/mehndiStencils/stencils (14).webp",
-    alt: "Stencil 14",
-  },
-  {
-    id: 15,
-    src: "/images/mehndiStencils/stencils (15).webp",
-    alt: "Stencil 15",
-  },
-  {
-    id: 16,
-    src: "/images/mehndiStencils/stencils (16).webp",
-    alt: "Stencil 16",
-  },
-  {
-    id: 17,
-    src: "/images/mehndiStencils/stencils (17).webp",
-    alt: "Stencil 17",
-  },
+  { id: 1, src: "/images/mehndiStencils/stencils (1).webp", alt: "Reusable bridal mehndi stencil full hand design - easy apply premium TIK TOK Mehndi henna stencil for weddings and bridal artists" },
+  { id: 2, src: "/images/mehndiStencils/stencils (2).webp", alt: "Arabic mehndi stencil pattern - quick henna design template ready to use professional mehndi stencil collection India" },
+  { id: 3, src: "/images/mehndiStencils/stencils (3).webp", alt: "Simple easy mehndi stencil for beginners - floral hand design reusable henna sticker stencil for girls and festival" },
+  { id: 4, src: "/images/mehndiStencils/stencils (4).webp", alt: "Indian traditional bridal mehndi stencil back hand - premium quality henna stencil designs for mehndi artist salon" },
+  { id: 5, src: "/images/mehndiStencils/stencils (5).webp", alt: "Eid special mehndi stencil design - fast apply henna template stencil for festival celebration TIK TOK Mehndi products" },
+  { id: 6, src: "/images/mehndiStencils/stencils (6).webp", alt: "Gol tikki mandala mehndi stencil pattern - reusable easy henna stencil for Diwali Karva Chauth traditional occasion" },
+  { id: 7, src: "/images/mehndiStencils/stencils (7).webp", alt: "Peacock border mehndi stencil full hand - bridal wedding henna design stencil professional artist supply premium" },
+  { id: 8, src: "/images/mehndiStencils/stencils (8).webp", alt: "Bracelet band style mehndi stencil - cute simple henna template for girls parties and small function quick apply" },
+  { id: 9, src: "/images/mehndiStencils/stencils (9).webp", alt: "Heart engagement mehndi stencil design - romantic henna pattern stencil for wedding party couple function mehndi" },
+  { id: 10, src: "/images/mehndiStencils/stencils (10).webp", alt: "Finger mehndi stencil set mix match designs - modern stylish henna stencil collection easy apply for beginners ladies" },
+  { id: 11, src: "/images/mehndiStencils/stencils (11).webp", alt: "Full front hand bridal mehndi stencil - heavy work premium export quality henna design template for professional studio" },
+  { id: 12, src: "/images/mehndiStencils/stencils (12).webp", alt: "Half hand simple mehndi stencil - Diwali quick henna design reusable stencil safe natural mehndi pattern template" },
+  { id: 13, src: "/images/mehndiStencils/stencils (13).webp", alt: "Back hand floral mehndi stencil Eid collection - beautiful pattern henna stencil wholesale retail online India" },
+  { id: 14, src: "/images/mehndiStencils/stencils (14).webp", alt: "Traditional heavy bridal mehndi stencil both hand - premium TIK TOK Mehndi stencils bulk order best price wholesale" },
+  { id: 15, src: "/images/mehndiStencils/stencils (15).webp", alt: "Simple festival mehndi stencil quick apply - smooth design henna template for kids and ladies easy mehndi at home" },
+  { id: 16, src: "/images/mehndiStencils/stencils (16).webp", alt: "Latest 2026 mehndi stencil bridal collection - premium henna stencil designs supplier mehndi artist salon reusable pack" },
+  { id: 17, src: "/images/mehndiStencils/stencils (17).webp", alt: "Premium bridal mehndi stencil set - wedding special henna patterns TIK TOK Mehndi stencils official products online India" },
 ];
 
 const MehndiStencils = () => {

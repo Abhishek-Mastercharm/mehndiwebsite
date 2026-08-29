@@ -3,7 +3,7 @@ const FeaturesStrip = () => {
     <div className="w-full">
       <img 
         src="/images/FeaturesStrip.webp" 
-        alt="Features Strip" 
+        alt="TIK TOK Mehndi features - 100% natural henna, smooth flow, long lasting dark stain, export quality mehndi cones"
         className="w-full h-auto object-contain"
       />
     </div>

@@ -10,7 +10,8 @@ const BlogCard = ({ blog }) => {
       <div className="overflow-hidden h-52 shrink-0">
         <img
           src={blog.image}
-          alt={blog.title}
+          alt={blog.imageAlt || blog.title}
+          title={blog.title + " - " + blog.category + " TIK TOK Mehndi blog"}
           className="w-full h-full object-cover group-hover:scale-105 duration-500"
         />
       </div>

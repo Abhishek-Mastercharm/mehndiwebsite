@@ -3,6 +3,39 @@ import { FaPhone, FaEnvelope } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="w-full bg-primary text-white">
+      {/* Hidden SEO keywords section - Google crawls, not visible to users */}
+      <div className="sr-only">
+        <h2>TIK TOK Mehndi — India&apos;s Trusted Mehndi Cone Manufacturer and Exporter</h2>
+        <p>
+          TIK TOK Mehndi official website India. TikTok Mehndi cones, TikTok Mehndi products, TikTok Mehndi henna,
+          TikTok Mehndi official, TikTok Mehndi website, TikTok Mehndi India.
+          Premium mehndi cones, henna cones, mehndi cone, henna cone. Ready made mehndi cones, ready to use mehndi cones.
+          Professional mehndi cones, bridal mehndi cones for artists. Natural mehndi cones, high quality mehndi cones,
+          fresh mehndi cones. Best mehndi cones, buy mehndi cones, buy henna cones online. Mehndi cones online,
+          henna cones online, mehndi cone price, mehndi products online. Mehndi cone supplier, mehndi cone manufacturer,
+          mehndi cone wholesale, henna cone wholesale, export quality mehndi cones India.
+          Discover premium mehndi cones, henna cones, and bridal mehndi stencils by TIK TOK Mehndi.
+          We manufacture and export 100 percent natural henna, red cone mehndi, black cone mehndi, bridal cones,
+          and herbal mehndi cones. Smooth paste flow, rich dark long lasting stain, perfect for wedding mehndi,
+          Eid mehndi, Diwali mehndi, bridal mehndi artists, mehndi cone wholesalers and mehndi retailers.
+          Buy ready made mehndi cones online at best wholesale price directly from the official mehndi cone
+          manufacturer and supplier in India. Export Quality Natural Henna, Bridal Special Mehndi, Wholesale Ready,
+          Worldwide Shipping, Made in India.
+        </p>
+        <h3>How to mehndi guides and application tips</h3>
+        <p>
+          How to apply mehndi cone, how to use mehndi cone, how to get dark mehndi color, how to make mehndi darker,
+          how to store mehndi cones, how to preserve mehndi cones, how long does mehndi take to develop,
+          mehndi cone storage, mehndi application tips, mehndi tips for beginners, bridal mehndi tips, natural henna tips.
+        </p>
+        <h3>Mehndi designs, henna designs and stencils</h3>
+        <p>
+          Mehndi designs, henna designs, bridal mehndi designs, simple mehndi designs, easy mehndi designs,
+          Indian mehndi designs, Arabic mehndi designs. Mehndi stencil, mehndi stencils, henna stencil designs,
+          reusable mehndi stencils, bridal mehndi stencil set, ready to apply henna sticker designs.
+        </p>
+      </div>
+
       {/* Contact Strip */}
       <div className="w-full border-b border-secondary/30">
         <div className="max-w-4xl mx-auto px-4 py-4 md:py-6">

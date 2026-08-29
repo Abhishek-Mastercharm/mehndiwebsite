@@ -12,7 +12,8 @@ const FeaturedBlog = ({ blog }) => {
         <div className="overflow-hidden h-64 md:h-auto">
           <img
             src={blog.image}
-            alt={blog.title}
+            alt={blog.imageAlt || blog.title}
+            title={blog.title + " - Featured TIK TOK Mehndi blog - " + blog.category}
             className="w-full h-full object-cover group-hover:scale-105 duration-500"
           />
         </div>

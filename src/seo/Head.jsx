@@ -6,7 +6,7 @@ const Head = ({
   description = "TIK TOK Mehndi manufactures and exports premium, 100% natural henna mehndi cones. Rich colour, smooth flow, and long-lasting stain — trusted by bridal mehndi artists, wholesalers and retailers worldwide for weddings, Eid, Diwali and festivals.",
   canonicalUrl = "https://mehndiwebsite.vercel.app",
   image = "https://mehndiwebsite.vercel.app/images/og-image.jpg",
-  keywords = "TIK TOK Mehndi, mehndi cone, henna cone, bridal mehndi, export mehndi, natural henna, red cone mehndi",
+  keywords = "TIK TOK Mehndi, TikTok Mehndi official, TikTok Mehndi website, TikTok Mehndi cones, TikTok Mehndi products, TikTok Mehndi India, TikTok Mehndi henna, mehndi cones, henna cones, mehndi cone, henna cone, ready made mehndi cones, ready to use mehndi cones, professional mehndi cones, bridal mehndi cones, mehndi cones for artists, natural mehndi cones, high quality mehndi cones, fresh mehndi cones, best mehndi cones, buy mehndi cones, buy henna cones, mehndi cones online, henna cones online, mehndi cone price, mehndi products online, mehndi cone supplier, mehndi cone manufacturer, mehndi cone wholesale, henna cone wholesale, how to apply mehndi cone, how to use mehndi cone, how to get dark mehndi color, how to make mehndi darker, how to store mehndi cones, mehndi cone storage, mehndi application tips, mehndi tips for beginners, bridal mehndi tips, natural henna tips, mehndi designs, henna designs, bridal mehndi designs, simple mehndi designs, easy mehndi designs, Indian mehndi designs, Arabic mehndi designs, mehndi stencil, mehndi stencils, henna stencil designs, export quality mehndi",
   type = "website",
 }) => {
   // Schema.org Structured Data - Organization
@@ -18,6 +18,8 @@ const Head = ({
     url: canonicalUrl,
     logo: `https://mehndiwebsite.vercel.app/images/product1.webp`,
     image: image,
+    description: description,
+    keywords: keywords,
     founder: "TIK TOK Mehndi",
     owner: {
       "@type": "Organization",
@@ -49,6 +51,10 @@ const Head = ({
       "@type": "Organization",
       name: "TIK TOK Mehndi",
     },
+    category: "Mehndi / Henna Cones",
+    keywords: "mehndi cones, henna cones, bridal mehndi cones, professional mehndi cones, natural mehndi cones, high quality mehndi cones, ready made mehndi cones, ready to use mehndi cones, best mehndi cones, buy mehndi cones online, mehndi cone manufacturer, mehndi cone wholesale, mehndi cone supplier, fresh mehndi cones, mehndi cones for artists, export quality mehndi, TikTok Mehndi cones, TikTok Mehndi products",
+    areaServed: "Worldwide",
+    countryOfOrigin: "India",
     offers: {
       "@type": "AggregateOffer",
       priceCurrency: "INR",
@@ -59,6 +65,8 @@ const Head = ({
       "@type": "AggregateRating",
       ratingValue: "4.8",
       reviewCount: "1000",
+      bestRating: "5",
+      worstRating: "1",
     },
   };
 
