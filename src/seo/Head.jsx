@@ -5,7 +5,7 @@ const Head = ({
   title = "TIK TOK Mehndi - Premium Export Quality Henna Cones",
   description = "TIK TOK Mehndi manufactures and exports premium, 100% natural henna mehndi cones. Rich colour, smooth flow, and long-lasting stain — trusted by bridal mehndi artists, wholesalers and retailers worldwide for weddings, Eid, Diwali and festivals.",
   canonicalUrl = "https://mehndiwebsite.vercel.app",
-  image = "https://mehndiwebsite.vercel.app/og-image.webp",
+  image = "https://mehndiwebsite.vercel.app/images/og-image.png",
   keywords = "TIK TOK Mehndi, mehndi cone, henna cone, bridal mehndi, export mehndi, natural henna, red cone mehndi",
   type = "website",
 }) => {
@@ -86,8 +86,8 @@ const Head = ({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:image:secure_url" content={image} />
-      <meta property="og:image:type" content="image/webp" />
-      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="1190" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content={title} />
       <meta property="og:locale" content="en_US" />
@@ -103,7 +103,7 @@ const Head = ({
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={image} />
-      <meta property="twitter:image:width" content="1200" />
+      <meta property="twitter:image:width" content="1190" />
       <meta property="twitter:image:height" content="630" />
       <meta property="twitter:image:alt" content={title} />
 
