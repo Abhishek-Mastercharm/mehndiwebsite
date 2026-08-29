@@ -5,7 +5,7 @@ const Head = ({
   title = "TIK TOK Mehndi - Premium Export Quality Henna Cones",
   description = "TIK TOK Mehndi manufactures and exports premium, 100% natural henna mehndi cones. Rich colour, smooth flow, and long-lasting stain — trusted by bridal mehndi artists, wholesalers and retailers worldwide for weddings, Eid, Diwali and festivals.",
   canonicalUrl = "https://mehndiwebsite.vercel.app",
-  image = "https://mehndiwebsite.vercel.app/images/og-image.png",
+  image = "https://mehndiwebsite.vercel.app/images/og-image.jpg",
   keywords = "TIK TOK Mehndi, mehndi cone, henna cone, bridal mehndi, export mehndi, natural henna, red cone mehndi",
   type = "website",
 }) => {
@@ -86,7 +86,7 @@ const Head = ({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:image:secure_url" content={image} />
-      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:type" content="image/jpg" />
       <meta property="og:image:width" content="1190" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content={title} />
