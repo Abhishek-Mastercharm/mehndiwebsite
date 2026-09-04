@@ -29,6 +29,20 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: "Times New Roman", Times, Georgia, serif;
   }
+
+  /* Custom text selection highlight - Light Mehndi Maroon (matches --primary #930101) */
+  ::selection {
+    background-color: #f4d4d4;
+    color: #7a1010;
+    text-shadow: none;
+  }
+
+  /* Firefox */
+  ::-moz-selection {
+    background-color: #f4d4d4;
+    color: #7a1010;
+    text-shadow: none;
+  }
 }
 
 @layer utilities {
