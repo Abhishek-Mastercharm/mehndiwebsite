@@ -1,8 +1,1 @@
-User-agent: *
-Allow: /
-
-# Specifically allow OpenAI's crawler for ChatGPT search discoverability
-User-agent: OAI-SearchBot
-Allow: /
-
-Sitemap: https://mehndiwebsite.vercel.app/sitemap.xml
+User-agent: *Allow: /# Specifically allow OpenAI's crawler for ChatGPT search discoverabilityUser-agent: OAI-SearchBotAllow: /Sitemap: https://altamash-mehndi.com/sitemap.xml
